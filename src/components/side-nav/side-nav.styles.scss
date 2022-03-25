@@ -1,0 +1,16 @@
+.side-nav {
+    grid-column: container-start / center-start;
+    grid-row: container-start / center-end;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-right: 2px solid var(--color-line);
+    width: 150px;
+    color: var(--color-text-tertiary);
+
+
+}
+
+.side-nav-active{
+    width: 300px;
+}

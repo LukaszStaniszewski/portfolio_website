@@ -1,0 +1,5 @@
+.main-container{
+    display: grid;
+    grid-template-columns: [container-start] minmax(max-content, 300px) [center-start] 1fr [center-end container-end] ;
+    grid-template-rows: [container-start] minmax(70px, max-content)  [center-start] 1fr [center-end container-end]
+  }

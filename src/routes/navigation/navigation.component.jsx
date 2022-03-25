@@ -1,22 +1,27 @@
 import { Link, Outlet } from "react-router-dom"
 import { Fragment } from "react"
-
-import './navigation.styles.scss'
+import Header from "../../components/header/header.component"
+import SideNav from "../../components/side-nav/side-nav.component"
+// import './navigation.styles.scss'
 
 const Navigation = () => {
+
+
     return (
         <Fragment>
-            <div className="navigation">
-                <div className="nav-link-container">
-                    <Link className="nav-link" to='/'>README.MD</Link>
-                </div>
-                <div className="nav-link-container">
+            {/* <div className="navigation">
+               
+                    <Link className="nav-link nav-link-clicked" to='/'>README.MD</Link>
+                
+             
                     <Link className="nav-link" to='/'>Projects</Link>
-                </div>
-                <div className="nav-link-container">
+                
+               
                     <Link className="nav-link" to='/'>Contact</Link>
-                </div>
-            </div>
+               
+            </div> */}
+            <Header></Header>
+            <SideNav></SideNav>
             <Outlet/>
         </Fragment>
         

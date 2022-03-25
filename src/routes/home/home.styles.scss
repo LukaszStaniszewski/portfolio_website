@@ -1,0 +1,7 @@
+.home-container {
+    grid-column: center-start / center-end;
+    grid-row: center-start/ [container-end];
+    background-color: white;
+    height: 500px
+   
+}
