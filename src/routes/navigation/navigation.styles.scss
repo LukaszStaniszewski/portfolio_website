@@ -1,0 +1,12 @@
+.navigation {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-background-secondary-m);
+
+    .nav-link-container {
+
+        .nav-link {
+            color: var(--color-text-primary-m);
+        }
+    }
+}
