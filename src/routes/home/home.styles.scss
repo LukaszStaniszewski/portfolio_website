@@ -17,11 +17,29 @@
 
     .home-welcome-text {
         margin-left: 80px;
-   
+        
+        div {
+            padding: 3px;
+        }
+       
         span {
-            display: inline-flex;
-            
+            display: inline-block;
+            text-indent: 10px;
+        }
+        span:nth-child(8),
+        span:nth-child(22) {
+            text-indent: 40px;
+        }
 
+        span:nth-child(12),
+        span:nth-child(17) {
+            text-indent: 80px;
+        }
+
+        span:nth-child(9),
+        span:nth-child(13),
+        span:nth-child(20) {
+            text-indent: 0;
         }
 
         // span:nth-child(2),
