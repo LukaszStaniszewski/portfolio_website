@@ -9,17 +9,6 @@ const Navigation = () => {
 
     return (
         <Fragment>
-            {/* <div className="navigation">
-               
-                    <Link className="nav-link nav-link-clicked" to='/'>README.MD</Link>
-                
-             
-                    <Link className="nav-link" to='/'>Projects</Link>
-                
-               
-                    <Link className="nav-link" to='/'>Contact</Link>
-               
-            </div> */}
             <Header></Header>
             <SideNav></SideNav>
             <Outlet/>

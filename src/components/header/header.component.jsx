@@ -1,13 +1,11 @@
-import { Link, useNavigate} from "react-router-dom"
+import { Link} from "react-router-dom"
 import { useState } from "react"
+import CustomLink from "../custom_link/custom_link.component"
 
 import './header.styles.scss'
 
 const Header = () => {
-    const [state, setState] = useState(false)
     const [active, setActive] = useState("/")
-    let navigate = useNavigate()
-    // console.log(history)
     
     const handleClick = (prop) => {
         switch(prop) {
@@ -26,12 +24,16 @@ const Header = () => {
 
     return (
    
-        <div className="header">
-            <Link className={`header-link ${active === "/" && "header-link-clicked"}`} onClick={() => handleClick("/")} to='/'>Home.js</Link>
+        <nav className="header">
+            <CustomLink classType='header' active={active} onClick={()=> handleClick('/')} to='/'>Home.js</CustomLink>
+            <CustomLink classType='header' active={active} onClick={()=> handleClick('readme')} to='readme'>README.MD</CustomLink>
+            <CustomLink classType='header' active={active} onClick={()=> handleClick('projects')} to='projects'>Projects</CustomLink>
+            <CustomLink classType='header' active={active} onClick={()=> handleClick('contact')} to='contact'>Contact</CustomLink>
+            {/* <Link className={`header-link ${active === "/" && "header-link-clicked"}`} onClick={() => handleClick("/")} to='/'>Home.js</Link>
             <Link className={`header-link ${active === 'readme' && "header-link-clicked"}`} onClick={() =>handleClick("readme")} to='readme'>README.MD</Link>
             <Link className={`header-link ${active === 'projects' && "header-link-clicked"}`} onClick={() =>handleClick("projects")} to='/'>Projects</Link>
-            <Link className={`header-link ${active === 'contact' && "header-link-clicked"}`} onClick={() =>handleClick("contact")} to='/'>Contact</Link>
-        </div>
+            <Link className={`header-link ${active === 'contact' && "header-link-clicked"}`} onClick={() =>handleClick("contact")} to='/'>Contact</Link> */}
+        </nav>
     )   
 }
 

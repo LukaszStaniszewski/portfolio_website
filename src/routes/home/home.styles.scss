@@ -1,7 +1,36 @@
 .home-container {
     grid-column: center-start / center-end;
     grid-row: center-start/ [container-end];
-    background-color: white;
-    height: 500px
+    min-height: fit-content;
+    margin: 10px 20px;
+    display:flex;
+    align-items: center;
+    font-size: 36px;
+    .home-rows {
+       width: 20px;
+       color: var(--color-text-primary);
+
+       .home-row{
+           padding: 3px;
+       }
+    }
+
+    .home-welcome-text {
+        margin-left: 80px;
    
+        span {
+            display: inline-flex;
+            
+
+        }
+
+        // span:nth-child(2),
+        // span:nth-child(5) {
+        //     text-indent: 40px;
+        // }
+        // span:nth-child(3),
+        // span:nth-child(4){
+        //     text-indent: 80px;
+        // }
+    }
 }
