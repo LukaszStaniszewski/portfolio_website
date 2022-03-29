@@ -3,3 +3,30 @@
     grid-template-columns: [container-start] minmax(max-content, 300px) [center-start] 1fr [center-end container-end] ;
     grid-template-rows: [container-start] minmax(70px, max-content)  [center-start] 1fr [center-end container-end]
   }
+
+
+@mixin media-desktop {
+  @media screen and (max-width: 2080px) {
+      @content;
+  }   
+}
+@mixin media-laptop {
+  @media screen and (max-width: 1680px) {
+      @content;
+  }   
+}
+@mixin media-tablet {
+  @media screen and (max-width: 1024px) {
+      @content;
+  }   
+}
+@mixin media-mobile{
+  @media screen and (max-width: 700px) {
+      @content;
+  }   
+}
+@mixin media-mobileS {
+  @media screen and (max-width: 400px) {
+      @content;
+  }   
+}

@@ -5,12 +5,45 @@
     left: 0;
     height: 100vh;
     border-right: 2px solid var(--color-line);
-    width: 100px;
+    width: 80px;
     color: var(--color-text-tertiary);
+    display: flex;
+    align-items: center;
+   
+    
+    &__logo-container {
+        padding: 0 15px;
+        width: 80px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
 
+    }
 
+    .logo-folders {
+        height: 50px;
+        cursor: pointer;
+        margin: 20px 0; 
+        filter: var(--color-folder-default)
+    }
+
+     .logo-clicked {
+        filter: var(--color-folder-clicked)
+    }
+
+    &__overlay {
+        height: 100%;
+        background-color: red;
+        width: 150px;
+        opacity: 0;
+    
+        
+    }
+   
 }
 
-.side-nav-active{
-    width: 300px;
+
+.side-nav-active {
+    width: 250px;
+    opacity: 1;
 }

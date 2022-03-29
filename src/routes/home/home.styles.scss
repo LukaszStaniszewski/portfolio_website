@@ -6,22 +6,24 @@
     display:flex;
     align-items: center;
     font-size: 36px;
+    line-height: 1.3;
+    max-height: 95vh;
+    overflow: hidden;
     .home-rows {
        width: 20px;
        color: var(--color-text-primary);
-
+       margin: auto 0;
+       
        .home-row{
-           padding: 3px;
        }
     }
 
     .home-welcome-text {
+        // margin-top: 17%;
+        // height: 36%;
+        // margin: auto 0 auto 80px;
         margin-left: 80px;
-        
-        div {
-            padding: 3px;
-        }
-       
+        position: relative;
         span {
             display: inline-block;
             text-indent: 10px;
@@ -35,20 +37,19 @@
         span:nth-child(17) {
             text-indent: 80px;
         }
-
+        
         span:nth-child(9),
         span:nth-child(13),
         span:nth-child(20) {
             text-indent: 0;
         }
-
-        // span:nth-child(2),
-        // span:nth-child(5) {
-        //     text-indent: 40px;
-        // }
-        // span:nth-child(3),
-        // span:nth-child(4){
-        //     text-indent: 80px;
-        // }
+        
+        .text-blink {
+            position: absolute;
+            display: block;
+            top: 140px;
+            right: -20px;
+        }
+      
     }
 }

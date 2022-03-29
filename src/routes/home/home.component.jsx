@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import TransformedText from "../../components/transformed_text/transformed_text.component"
 import "./home.styles.scss"
 
@@ -18,25 +20,32 @@ const TEXT_COLORS = {
 }
 
 const Home = () => {
+    const [state, setState] = useState('|')
+    const array = [...Array(30)];
   
-    const array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
     const welcomeText = 'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }'
-  
+
+
+    setTimeout(()=> {
+         if(state) return setState(null)
+        if(!state) return setState("|")
+    },500)
+    
     return (
         <section className="home-container" >
             <div className="home-rows">{
-                array.map(number => {
-                    return <div key={number} className="home-row">{number}</div>
+                array.map((number, index) => {
+                    return <div key={index} className="home-row">{index+1}</div>
                 })
-            }</div>
-            <div >
-                <div className="home-welcome-text" >
-                    <TransformedText text={welcomeText} color={TEXT_COLORS}/> 
-                </div>
+            }
+            </div>
+            
+            <div className="home-welcome-text" >
+                <TransformedText text={welcomeText} color={TEXT_COLORS}> </TransformedText>
+                <span className="text-primary text-blink">{state}</span> 
             </div>
         </section>
     )
 }
-
 export default Home

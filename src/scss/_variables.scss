@@ -12,4 +12,20 @@ html {
     --color-bracket-secondary: #DA70D6;
     --color-quotation-marks: #6BFF81;
     --color-line: #002D47;
+    --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg) brightness(87%) contrast(91%);
+    --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg) brightness(102%) contrast(95%);
+
 }
+
+$font-sizes: (
+  "font-size-mobileS": 16px,
+  "font-size-mobile": 24px,
+  "font-size-tablet": 32px,
+  "font-size-laptop": 36px,
+  "font-size-desktop": 40px,
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
