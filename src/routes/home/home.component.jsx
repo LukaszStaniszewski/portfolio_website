@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import TransformedText from "../../components/transformed_text/transformed_text.component"
+import RowCounter from "../../components/row_counter/row_counter.component"
 import "./home.styles.scss"
 
 
@@ -34,13 +35,7 @@ const Home = () => {
     
     return (
         <section className="home-container" >
-            <div className="home-rows">{
-                array.map((number, index) => {
-                    return <div key={index} className="home-row">{index+1}</div>
-                })
-            }
-            </div>
-            
+            <RowCounter className="home-rows" quantity={30}/>
             <div className="home-welcome-text" >
                 <TransformedText text={welcomeText} color={TEXT_COLORS}> </TransformedText>
                 <span className="text-primary text-blink">{state}</span> 

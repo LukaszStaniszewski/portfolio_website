@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: [container-start] minmax(max-content, 300px) [center-start] 1fr [center-end container-end] ;
     grid-template-rows: [container-start] minmax(70px, max-content)  [center-start] 1fr [center-end container-end]
+
+    
   }
 
 
@@ -29,4 +31,17 @@
   @media screen and (max-width: 400px) {
       @content;
   }   
+}
+
+@mixin container-basic($font-size) {
+  grid-column: center-start / center-end;
+  grid-row: center-start/ [container-end];
+  min-height: fit-content;
+  
+  margin: 10px 20px;
+  display: flex;
+  font-size: $font-size;
+  line-height: 1.3;
+  max-height: calc(100vh - 70px);
+  overflow: hidden;
 }

@@ -5,6 +5,7 @@ import Home from './routes/home/home.component';
 import ReadMe from './routes/read_me/read_me.component';
 
 function App() {
+  // document.documentElement.setAttribute("data-theme", "light")
   return (
     <div className="main-container">
       <Routes>

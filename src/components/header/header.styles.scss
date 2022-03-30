@@ -3,32 +3,59 @@
     grid-column: center-start / container-end;
     grid-row: container-start / center-start;
     
-    width: 100vw;
+    width: calc(100vw - 100px);
     height: 70px;
-    background-color: var(--color-background-secondary-m);
+    background-color: var(--color-background-primary);
     display: flex;
     align-items: center;
-    font-size: 24px;
-   
-           
-        // .header-link {
-        //     color: var(--color-text-primary-m);
-        //     width: 200px;
-        //     min-width: fit-content;
-        //     height: inherit;
-        //     background-color: var(--color-background-secondary-m);
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     cursor: pointer;
-        //     margin: auto 0;
-        //     border: 1px solid black;
-          
-        // }
+    justify-content: space-between;
+    font-size: 24px;  
+    border-bottom: 2px solid var(--color-line);
+    margin-right: 10px;
+    padding-bottom: 1px;
 
-        // .header-link-clicked {
-        //     background-color: var(--color-background-secondary);
-        //     border-top: 5px solid var(--color-text-primary-m)
-        // }
+    &__link-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
    
+    &__toogle-theme-container {
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .switch-theme {
+            background-color: var(--color-switch-button);
+            width: 60px;
+            height: 30px;
+            border-radius: 50px;
+            position: relative;
+            border: none;
+            margin: 0 10px;
+         
+            &::after {
+                transition: transform 0.3s ease-in-out;
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: var(--color-text-primary);
+                width: 27px;
+                height: 28px;
+                border-radius: 100%;
+                margin: 1px;  
+                top: 0;
+            }
+        }
+        .light-mode {
+           
+            &::after {
+                background-color: white;
+                transform: translateX(31px);
+                border-radius: 5;
+            }
+        }
+        
+    }
+    
 }

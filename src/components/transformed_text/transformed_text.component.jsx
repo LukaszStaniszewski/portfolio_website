@@ -5,7 +5,6 @@ import "./transformed_text.styles.scss"
 const TransformedText = ({text, color, ...otherProps}) => {
 
  const splitText = text.split(' ');
-  console.log(splitText)
   return (
   
   <Fragment>

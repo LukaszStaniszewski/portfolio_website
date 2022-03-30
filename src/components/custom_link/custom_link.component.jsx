@@ -32,7 +32,7 @@ const DESTINATION = {
 
 
 const CustomLink = ({children, classType, active,  ...otherProps}) => {
-    console.log("active",active)
+
     console.log(LINK_TYPE_CLASS[classType])
     return<Link 
         className={`default-link ${active === otherProps.to && LINK_TYPE_CLASS[classType]}`}

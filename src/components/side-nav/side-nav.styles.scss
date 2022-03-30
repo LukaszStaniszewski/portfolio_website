@@ -7,9 +7,10 @@
     border-right: 2px solid var(--color-line);
     width: 80px;
     color: var(--color-text-tertiary);
+    background-color: var(--color-background-side-nav);
     display: flex;
     align-items: center;
-   
+    
     
     &__logo-container {
         padding: 0 15px;
