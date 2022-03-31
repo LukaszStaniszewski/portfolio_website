@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./custom_link.styles.scss"
+import React from "react"
 
 const LINK_TYPE_CLASS = {
   header: 'header-link-clicked'
@@ -33,7 +34,7 @@ const DESTINATION = {
 
 const CustomLink = ({children, classType, active,  ...otherProps}) => {
 
-    console.log(LINK_TYPE_CLASS[classType])
+   
     return<Link 
         className={`default-link ${active === otherProps.to && LINK_TYPE_CLASS[classType]}`}
          {...otherProps}
@@ -51,4 +52,4 @@ const CustomLink = ({children, classType, active,  ...otherProps}) => {
 //     </Link>
 // }
 
-export default CustomLink;
+export default React.memo(CustomLink);

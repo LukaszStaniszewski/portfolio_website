@@ -33,6 +33,7 @@
             position: relative;
             border: none;
             margin: 0 10px;
+            cursor: pointer;
          
             &::after {
                 transition: transform 0.3s ease-in-out;
@@ -47,7 +48,7 @@
                 top: 0;
             }
         }
-        .light-mode {
+        .light {
            
             &::after {
                 background-color: white;

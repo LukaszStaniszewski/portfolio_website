@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import TransformedText from "../../components/transformed_text/transformed_text.component"
 import RowCounter from "../../components/row_counter/row_counter.component"
@@ -22,17 +22,20 @@ const TEXT_COLORS = {
 
 const Home = () => {
     const [state, setState] = useState('|')
-    const array = [...Array(30)];
   
-
     const welcomeText = 'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }'
 
+    useEffect(() => {
+     
+        return () => setState();
+    }, [])
 
+        
+      
     setTimeout(()=> {
-         if(state) return setState(null)
-        if(!state) return setState("|")
-    },500)
-    
+        if(state) return setState(null)
+       if(!state) return setState("|")
+   },500)
     return (
         <section className="home-container" >
             <RowCounter className="home-rows" quantity={30}/>

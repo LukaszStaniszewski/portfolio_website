@@ -42,7 +42,7 @@ html[data-theme="light"] {
 
 $font-sizes: (
   "font-size-mobileS": 14px,
-  "font-size-mobile": 20px,
+  "font-size-mobile": 26px,
   "font-size-tablet": 32px,
   "font-size-laptop": 36px,
   "font-size-desktop": 40px,
@@ -53,3 +53,16 @@ $font-sizes: (
   @return map-get($font-sizes, $font-size-style);
 };
 
+
+$font-sizes-projects: (
+  "font-size-mobileS": 14px,
+  "font-size-mobile": 20px,
+  "font-size-tablet": 24px,
+  "font-size-laptop": 28px,
+  "font-size-desktop": 32px,
+  "font-size-desktopL": 36px
+);
+
+@function font-size2($font-size-style) {
+  @return map-get($font-sizes-projects, $font-size-style);
+};

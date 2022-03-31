@@ -10,9 +10,10 @@
     cursor: pointer;
     margin: 0px 1px;
     border: none;
+
+    &.header-link-clicked {
+        background-color: var(--color-background-secondary);
+        border-top: 5px solid var(--color-text-primary-m)
+    }
 }
 
-.header-link-clicked {
-    background-color: var(--color-background-secondary);
-    border-top: 5px solid var(--color-text-primary-m)
-}

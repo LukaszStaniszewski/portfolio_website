@@ -1,8 +1,10 @@
-
+import "./contact.styles.scss"
 
 const Contact = () => {
 
-    console.log(
-        "I am Łukasz"
+    return (
+        <div>Contact site</div>
     )
 }
+
+export default Contact
