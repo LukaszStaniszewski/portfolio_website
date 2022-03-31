@@ -13,7 +13,9 @@
     border-bottom: 2px solid var(--color-line);
     margin-right: 10px;
     padding-bottom: 1px;
-
+    position: sticky;
+    top: 0;
+    z-index: 3;
     &__link-container {
         display: flex;
         align-items: center;

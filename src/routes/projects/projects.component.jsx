@@ -1,40 +1,28 @@
-import { useEffect } from "react";
+
+import {ReactComponent as ScrollMouse} from "../../assets/mouse.svg"
+
+import Project from "../../components/project/project.component"
 import "./projects.styles.scss"
-import {ReactComponent as GitLogo} from "../../assets/git-logo.svg"
+import PROJECTS_DATA from "./projects_data"
 
 const Projects = () => {
-    // .join('</span><span>') 
-    useEffect(() => {
-        const button = document.querySelector('.button')
-        button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>';
-        console.log(button.textContent)
-    }, [])
+
+const executeScroll = () =>  window.scrollTo(0, (window.innerHeight + 30))
 
     return (
         <section className="projects-container">
-            <div className="project-container">
-                <div className="project-content">
-                    <h3 className="project-content--title">Book World</h3>
-                    <span className="project-content--about">This project is an e-commerce webesite.
-                    It has sign in / sign up functionality, abbility to browse thrugh various shoping categories, possibility to add items to cart and pay for them with a payment card.</span>
-                    <ul className="project-content--technologies">
-                        <li>HTML</li>
-                        <li>Sass</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>React-Redux</li>
-                        <li>Sagas</li>
-                        <li>Firebase</li>
-                    </ul>
-                    <div className="project-content__button-container">
-                        <button className="button drive ">Visit{`\xa0`}site</button>
-                        <GitLogo/>
-                    </div >
-                </div>
-                <div className="project-image" style={{backgroundImage: "url('https://i.ibb.co/5hjSVgW/Screen-Shot-2022-01-24-at-20-35-10-PM.png)'"}}>
-               
-                </div>
-            </div>
+            <button className="scroll-button" onClick={executeScroll}>
+                <ScrollMouse   />
+             </button>
+            {
+                PROJECTS_DATA.map((project, index) => {
+                    if(index === 1) return <Project key={index} data={project}/>
+                    
+    
+                    return <Project key={index} data={project} ></Project>
+                })
+            }
+        
         </section>
     )
 }

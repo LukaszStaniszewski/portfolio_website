@@ -3,43 +3,41 @@
     grid-row: container-start / center-end;
     top: 0;
     left: 0;
-    height: 100vh;
+   
     border-right: 2px solid var(--color-line);
     width: 80px;
     color: var(--color-text-tertiary);
     background-color: var(--color-background-side-nav);
     display: flex;
-    align-items: center;
     
-    
+   
+
     &__logo-container {
+        
         padding: 0 15px;
         width: 80px;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .logo-folders {
-        height: 50px;
-        cursor: pointer;
-        margin: 20px 0; 
-        filter: var(--color-folder-default)
-    }
-
-     .logo-clicked {
-        filter: var(--color-folder-clicked)
-    }
-
-    &__overlay {
         height: 100%;
-        background-color: red;
-        width: 150px;
-        opacity: 0;
+        display: flex;
+        justify-content: center;
+        .logo-folders {
+            cursor: pointer;
+            height: 50px;
+            position: fixed;
+            
+            margin: 20px 0; 
+            filter: var(--color-folder-default);
+
+
+            &.logo-clicked {
+                filter: var(--color-folder-clicked)
+            }
+        }
     
         
     }
+    
+   
+  
    
 }
 
@@ -47,4 +45,5 @@
 .side-nav-active {
     width: 250px;
     opacity: 1;
+    background-color: blue;
 }

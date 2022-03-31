@@ -1,12 +1,13 @@
 import { useLocation} from "react-router-dom"
-import { useState, useEffect } from "react"
-import CustomLink from "../custom_link/custom_link.component"
+import { useState, useEffect} from "react"
+
 import {ReactComponent as MoonDark} from "../../assets/theme-switch/moon-dark.svg"
 import {ReactComponent as MoonLight} from "../../assets/theme-switch/moon-light.svg"
 import {ReactComponent as SunDark} from "../../assets/theme-switch/sun-dark.svg"
 import {ReactComponent as SunLight} from "../../assets/theme-switch/sun-light.svg"
-import {ReactComponent as GitLogo} from "../../assets/git-logo.svg"
 
+import CustomLink from "../custom_link/custom_link.component"
+import { useThemeContext} from "../../context/theme/theme.context"
 import './header.styles.scss'
 
 const Header = () => {
@@ -17,10 +18,12 @@ const Header = () => {
         const initialValue = JSON.parse(saved)
         return initialValue || null
     })
- 
+    // const {setThemeContext} = useThemeContext
+    const {setThemeContext} = useThemeContext()
     useEffect(() => {
         localStorage.setItem("theme", JSON.stringify(theme))
         document.documentElement.setAttribute("data-theme", theme)
+        setThemeContext(theme)
     }, [theme])
     const handleClick = (prop) => {
         switch(prop) {
