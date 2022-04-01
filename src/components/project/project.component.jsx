@@ -1,19 +1,14 @@
-import { useEffect, useRef } from "react";
 import {ReactComponent as GitLogo} from "../../assets/git-logo.svg";
 import {ReactComponent as GitLogoLight} from "../../assets/git-logo-light.svg";
 
 import { useThemeContext} from "../../context/theme/theme.context";
+import CustomButton from "../custom_button/custom_button.component";
 import "./project.styles.scss"
 
 const Project = ({data}) => {
     const {currentTheme} = useThemeContext()
     const {title, text, image,technologies} = data
-    const buttonRef = useRef()
-
-useEffect(() => {
-        buttonRef.current.innerHTML = '<div><span>' + buttonRef.current.textContent.trim().split('').join('</span><span>') + '</span></div>';
-    }, [])
-
+   
     return (
     <div className="project-container">
         <div className="project-content">
@@ -25,7 +20,7 @@ useEffect(() => {
                 }
             </ul>
             <div className="project-content__button-container">
-                <button ref={buttonRef} className="button-project drive ">Visit{`\xa0`}site</button>
+                <CustomButton>Visit{`\xa0`}site</CustomButton>
                 {
                     currentTheme 
                     ? <GitLogoLight/>

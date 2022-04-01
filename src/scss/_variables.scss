@@ -4,7 +4,7 @@ html{
     --color-background-secondary-m: #000F1B;
     --color-background-side-nav: #011627;
     --color-text-primary: #00BFF9;
-    --color-text-primary-m: #219FD5;
+    --color-text-primary-m: #219FD5; // text && footer
     --color-text-secondary: #D6DEEB;
     --color-text-tertiary: #87AFF4;
     --color-text-quaternary: #D3EED6;
@@ -16,6 +16,7 @@ html{
     --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg) brightness(87%) contrast(91%);
     --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg) brightness(102%) contrast(95%);
     --color-switch-button: rgb(243, 243, 243);
+    --color-box-shadow: 39, 94, 254; // dark blue
 
 };
 
@@ -38,6 +39,7 @@ html[data-theme="light"] {
   --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg) brightness(87%) contrast(91%);
   --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg) brightness(102%) contrast(95%);
   --color-switch-button: #011627;
+  --color-box-shadow: 21, 25, 36; // black
 };
 
 $font-sizes: (

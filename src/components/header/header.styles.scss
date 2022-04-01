@@ -1,9 +1,11 @@
+@import "../../scss/index.scss";
+
 .header {
     
     grid-column: center-start / container-end;
     grid-row: container-start / center-start;
     
-    width: calc(100vw - 100px);
+    width: calc(100vw - 80px);
     height: 70px;
     background-color: var(--color-background-primary);
     display: flex;
@@ -11,11 +13,12 @@
     justify-content: space-between;
     font-size: 24px;  
     border-bottom: 2px solid var(--color-line);
-    margin-right: 10px;
+    
     padding-bottom: 1px;
     position: sticky;
     top: 0;
     z-index: 3;
+    box-shadow: 0 2px 8px -1px rgba(var(--color-box-shadow), .22);
     &__link-container {
         display: flex;
         align-items: center;
