@@ -1,11 +1,15 @@
 import React from "react";
 import "./row_counter.styles.scss"
 
-const RowCounter = ({quantity, className}) => {
-    const array = [...Array(quantity).keys()];
-  
+
+
+const RowCounter = ({className, number}) => {
+
+    const array = [...Array(50).keys()];
+
+ 
     return (
-        <div className={`row-counter-default ${className}`}>
+        <div  className={`row-counter-default ${className}`}>
            {array.join(" ")}
         </div>
     )

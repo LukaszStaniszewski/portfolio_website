@@ -11,7 +11,7 @@
         }
     }
     --duration: .5s;
-    --move-hover: -2px;
+    --move-hover: -4px;
    
     margin: 0 40px 0 0;
     padding: 12px 24px;
@@ -23,7 +23,7 @@
     background: $background;
     color: $text;
     transform: translateY(var(--y));
-    transition: transform .5s ease, box-shadow .5s ease;
+    transition: transform .5s ease;
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
     div {

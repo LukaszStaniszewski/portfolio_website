@@ -11,6 +11,8 @@ const Projects = () => {
 const {currentTheme} = useThemeContext()
 const executeScroll = () =>  window.scrollTo(0, (window.innerHeight + 30))
 
+
+
     return (
         <section className="projects-container">
             <button className="scroll-button" onClick={executeScroll}>

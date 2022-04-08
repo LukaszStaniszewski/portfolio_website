@@ -3,7 +3,6 @@
 .home-container {
     @include container-basic(font-size(font-size-desktopL));
     align-items: center;
-    
     .home-welcome-text {
         margin-left: 80px;
         position: relative;

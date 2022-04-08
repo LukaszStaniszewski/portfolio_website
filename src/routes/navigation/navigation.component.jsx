@@ -10,7 +10,7 @@ const Navigation = () => {
     return (
         <Fragment>
             <Header></Header>
-            <SideNav></SideNav>
+            {/* <SideNav></SideNav> */}
             <Outlet/>
             <Footer></Footer>
         </Fragment>

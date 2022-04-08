@@ -22,16 +22,17 @@ html{
 
 html[data-theme="light"] {
   --color-background-primary: #FFFFFF;
-  --color-background-secondary: #FFFFFF; // czesc side nava po rozwinieciu
+  --color-background-secondary: #FFFFFF;
   --color-background-secondary-m: rgb(243, 243, 243);  
-  --color-background-side-nav: #2c2c2c;  // side-nav 
-  --color-text-primary: #2f86d2; // kolor rows i glowny kolor tekstu
-  --color-text-primary-m: #1857a4; // kolor linkow po kliknieciu
-  --color-text-new-file: #189b2c; // to sa poliki ktore nie zostaly dodane do gita
-  --color-text-secondary: #828282;
+  --color-background-side-nav: #2c2c2c;  
+  --color-text-primary: #2f86d2; 
+  --color-text-primary-m: #1857a4; 
+  --color-text-new-file: #189b2c; 
+  // --color-text-secondary: #828282;
+  --color-text-secondary: #011627;
   --color-text-tertiary: #B1108E;
   --color-text-quaternary: #A44185;
-  --color-text-quinary: #034c7c; // tekst w readme ##
+  --color-text-quinary: #034c7c; // readme ##
   --color-bracket-primary: #0431fa;
   --color-bracket-secondary: #319331;
   --color-quotation-marks: #d86db6;;
@@ -57,7 +58,7 @@ $font-sizes: (
 
 
 $font-sizes-projects: (
-  "font-size-mobileS": 14px,
+  "font-size-mobileS": 16px,
   "font-size-mobile": 20px,
   "font-size-tablet": 24px,
   "font-size-laptop": 28px,

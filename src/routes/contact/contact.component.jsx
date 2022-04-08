@@ -32,6 +32,10 @@ const handleSubmit = async (event) => {
 }
     return (
         <div className="contact-container" onSubmit={handleSubmit}>
+            {/* <span>Let's connect and get to know each other</span> */}
+            <span>CONTACT ME</span>
+           
+            <span>I will responde as soon as possible</span>
             <form ref={formRef} className="contact-form" >
         
                 <FormInputs 

@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect} from "react"
 
 import TransformedText from "../../components/transformed_text/transformed_text.component"
 import RowCounter from "../../components/row_counter/row_counter.component"
 import "./home.styles.scss"
+
 
 
 const TEXT_COLORS = {
@@ -22,11 +23,10 @@ const TEXT_COLORS = {
 
 const Home = () => {
     const [state, setState] = useState('|')
-  
     const welcomeText = 'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }'
 
     useEffect(() => {
-     
+       
         return () => setState();
     }, [])
 
@@ -38,7 +38,7 @@ const Home = () => {
    },500)
     return (
         <section className="home-container" >
-            <RowCounter className="home-rows" quantity={30}/>
+            <RowCounter className="home-rows"/>
             <div className="home-welcome-text" >
                 <TransformedText text={welcomeText} color={TEXT_COLORS}> </TransformedText>
                 <span className="text-primary text-blink">{state}</span> 

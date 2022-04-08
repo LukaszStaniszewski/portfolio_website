@@ -1,5 +1,5 @@
-import {ReactComponent as GitLogo} from "../../assets/git-logo.svg";
-import {ReactComponent as GitLogoLight} from "../../assets/git-logo-light.svg";
+import {ReactComponent as GitLogo} from "../../assets/tech-skills/git-logo.svg";
+import {ReactComponent as GitLogoLight} from "../../assets/tech-skills/git-logo-light.svg";
 
 import { useThemeContext} from "../../context/theme/theme.context";
 import CustomButton from "../custom_button/custom_button.component";
@@ -7,7 +7,7 @@ import "./project.styles.scss"
 
 const Project = ({data}) => {
     const {currentTheme} = useThemeContext()
-    const {title, text, image,technologies} = data
+    const {title, text, image,technologies, url, github} = data
    
     return (
     <div className="project-container">
@@ -20,12 +20,14 @@ const Project = ({data}) => {
                 }
             </ul>
             <div className="project-content__button-container">
-                <CustomButton>Visit{`\xa0`}site</CustomButton>
+                <CustomButton newTab={url} >Visit{`\xa0`}site</CustomButton>
+                <a href={github} target="_blank"  className="github-link">
                 {
                     currentTheme 
-                    ? <GitLogoLight/>
-                    :  <GitLogo/>
+                    ? <GitLogoLight className="git-logo"/>
+                    :  <GitLogo className="git-logo"/>
                 }
+                </a>
             </div >
         </div>
         <div className="project-image" style={{backgroundImage: `url(${image})`}}>

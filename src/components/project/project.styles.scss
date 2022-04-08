@@ -1,12 +1,15 @@
 @import "../../scss/index.scss";
 
 .project-container {
+    $width-text: 40%;
+    $width-image: 53%;
+    $width-space-between: 1%;
     margin: 70px 20px 0px 20px;
     display: flex;
     position: relative;
     justify-content: center;
     width: 80%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 120px);
   
     @include media-laptop {
         &{
@@ -14,8 +17,8 @@
         }
     }
     .project-content {
-        margin-right: 3%;
-        width: 45%;
+   
+        width: $width-text;
        
         &--title {
             margin-bottom: 30px;
@@ -54,12 +57,51 @@
 
         &__button-container {
             display: flex;
+            justify-content: flex-start;
             margin-top: 20px;
+
+            .github-link {
+                margin-left: 40px;
+                display: flex;
+                cursor: pointer;
+                position: relative;
+               
+
+                
+
+                &:hover,
+                &:active {
+                    transition: transform .5s ease;
+                    transform:translateY(-4px);
+
+                    &::after {
+                        content: "Check the code";
+                       
+                        bottom: 20px;
+                        left: 48px;
+                        display: block;
+                        font-size: font-size2(font-size-mobileS);
+                        inline-size: max-content;
+                        color: var(--color-text-secondary);
+                        padding: 2px 3px;
+                        position: absolute;
+                        border-radius: 5px;
+                        border: 1px solid var(--color-text-primary);
+                        box-shadow: 0 4px 20px -2px rgba(var(--color-box-shadow), .5)
+                    }
+                }
+
+                .git-logo{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
         
         }
     }
     .project-image {
-        width: 45%;
+        margin-left: $width-space-between;
+        width: $width-image;
         height: 100%;
     
         background-size: contain;
