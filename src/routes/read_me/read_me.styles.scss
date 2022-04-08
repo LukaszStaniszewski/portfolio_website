@@ -1,27 +1,100 @@
 @import "../../scss/index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
 
 .readme-container {
-    @include container-basic(32px);
- 
+    @include container-basic(font-size2(font-size-desktopL));
+    
     .readme-content {
-       color: var(--color-text-quinary);
-       display: flex;
-      
-       width: 100%;
-       flex-direction: column;
-       align-items: center;
-       padding: 0 30px;
-       &--introduction {
-           color:var(--color-text-secondary);
-           margin: 10px 0 40px 0;
-           font-size: 30px;
-           text-align: middle;
-       }
+        $color-title: var(--color-text-quinary);
+        $color-text: var(--color-text-secondary);
+        color: $color-title;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: calc(10px + 2vw);
+        padding: 0 calc(10px + 7vw);
+        @include media-laptop {
+        &{
+            font-size: font-size2(font-size-desktop);  
+            }
+        }
+        @include media-tablet {
+        &{
+            font-size: font-size2(font-size-laptop);  
+            }
+        }
+        @include media-mobile {
+        &{
+            font-size: font-size2(font-size-tablet);  
+            }
+        }
+        @include media-mobileS {
+        &{
+            font-size: font-size2(font-size-mobile);  
+            }
+        }
+        &--introduction {
+            color: $color-text;
+            
+            margin: 0px 10px 25px 10px;
+            padding: 20px 0;
+            text-align: left;
+            font-family: 'Raleway', sans-serif;
+        
+            font-weight: 400;
+        
+            
+            @include media-laptop {
+                &{
+                    font-size: font-size2(font-size-laptop);  
+                }
+            }
+            @include media-tablet {
+                &{
+                    font-size: font-size2(font-size-tablet);  
+                }
+            }
+            @include media-mobile {
+                &{
+                    font-size: font-size2(font-size-mobile);  
+                }
+            }
+            @include media-mobileS {
+                &{
+                    font-size: font-size2(font-size-mobileS);  
+                }
+            }
 
-       &__logos-container {
-           height: max-content;
+            .part1 {
+                display: block;
+            }
+            .part2 {
+                margin-top: 10px;
+                display: block;
+                            
+            }
+            .contact-button {
+                display: none;
+                margin-left: 10px;
+                cursor: pointer;
+                
+            }
+            &:hover,
+            &:active {
+                .contact-button {
+                    display: inline-block;
+                    animation: shake 1.4s ease-in-out forwards
+                    
+                }         
+            }        
+        }
+      
+        &__logos-container {
+            height: max-content;
             display: flex;
             font-size: 20px;
+            color: $color-text;
             div {
                 padding: 10px 20px;
                 display: flex;
@@ -30,16 +103,25 @@
                 justify-content: flex-end;
             }
 
-
             .logo {
-
                 margin: 20px;
                 width: 60px;
                 height: auto;
                 display: flex;
             }
-           
-     
-       }
+            
+        
+        }
     }
 }
+
+@keyframes shake {
+    50% {
+        transform: scale(1.05)
+    };
+   
+    100% {
+        transform: scale(1)
+    };
+}
+

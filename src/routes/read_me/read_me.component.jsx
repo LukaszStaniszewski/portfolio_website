@@ -1,21 +1,37 @@
-import RowCounter from "../../components/row_counter/row_counter.component"
+import { Link } from "react-router-dom"
 import {ReactComponent as JsLogo} from "../../assets/tech-skills/js-logo.svg"
 import {ReactComponent as SassLogo} from "../../assets/tech-skills/sass-logo.svg"
 import {ReactComponent as ReactLogo} from "../../assets/tech-skills/react-logo.svg"
 import {ReactComponent as TsLogo} from "../../assets/tech-skills/ts-logo.svg"
 import {ReactComponent as ReduxLogo} from "../../assets/tech-skills/redux-logo.svg"
-import {ReactComponent as GitLogo} from "../../assets/tech-skills/git-logo.svg"
-
+import {ReactComponent as GitLogo} from "../../assets/tech-skills/git-logo.svg";
+import {ReactComponent as GitLogoLight} from "../../assets/tech-skills/git-logo-light.svg";
+import RowCounter from "../../components/row_counter/row_counter.component"
+import TransformedText from "../../components/transformed_text/transformed_text.component";
+import { useThemeContext } from "../../context/theme/theme.context"
 import "./read_me.styles.scss"
 
+const TEXT_COLORS = {
+    Hi: 'text-tertiary',
+    '()': 'bracket-primary',
+}
+
 const ReadMe = () => {
-    
+    const {currentTheme} = useThemeContext()
     return (
-        <div className="readme-container">
+        <section className="readme-container">
             <RowCounter className="readme-row" quantity={20}/>
             <div className="readme-content">
                 <div>## About me</div>
-                <p className="readme-content--introduction">Hi! I am what you might call an "aspiring" coder. I've started to code a good year ago, realized it was even more fun than expected, and decided to turn my career around. As of now (Feb 2022), I'm looking for my first job or internship as a front-end developer.</p>
+               <div className="readme-content--introduction">
+                    <span className="part1">When I've started to learn programming, realized that process of developing application, gives me that feeling of enthusiasm. The need to think about it from moring till evening is more important then the world that surrounds me. This is my attitude towards programming.</span>
+                    <span className="part2">I am looking for my first job as frontend developer. If you have any questions contact me. 
+                    <Link to="/contact" className="contact-button"> 
+                        <TransformedText style={{fontFamily: "Menlo"}} text="Hi ()" color={TEXT_COLORS}/>
+                    </Link>
+                    </span>
+
+               </div>
                 <div>## Tech skills</div>
                
                     <div className="readme-content__logos-container">
@@ -43,14 +59,18 @@ const ReadMe = () => {
                             <span>Sass</span>
                         </div>
                         <div>
-                            <GitLogo className="logo"></GitLogo>
+                            {
+                                currentTheme 
+                                ? <GitLogoLight className="logo"></GitLogoLight>
+                                : <GitLogo className="logo"></GitLogo>
+                            }
                             <span>GitHub</span>
                         </div>
                     </div>
 
                
             </div>
-        </div>
+        </section>
     )
 }
 
