@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./custom_button.styles.scss"
 
-const CustomButton = ({children, newTab, ...otherProps}) => {
-    console.log("custom BUtton hit")
+const CustomButton = ({children, newTab, className, ...otherProps}) => {
     const buttonRef = useRef()
 
     const visitSite = () =>{
@@ -16,7 +15,7 @@ const CustomButton = ({children, newTab, ...otherProps}) => {
     }, []) 
 
   return (
-    <button ref={buttonRef} className="custom-button-default drive " onClick={visitSite} {...otherProps}>{children}</button>
+    <button ref={buttonRef} className={`custom-button-default drive ${className}`}  onClick={visitSite} {...otherProps}>{children}</button>
   ) 
 }
 

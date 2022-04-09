@@ -45,3 +45,54 @@
   max-height: calc(100vh - 120px);
   overflow: hidden;
 }
+
+@mixin responsiveText {
+  font-size: font-size2(font-size-desktop);
+  
+  @media screen and (max-width: 1680px) {
+    font-size: font-size2(font-size-laptop);
+  };
+  @media screen and (max-width: 1024px) {
+    font-size: font-size2(font-size-tablet);
+  };
+  @media screen and (max-width: 700px) {
+    font-size: font-size2(font-size-mobile);
+  };
+  @media screen and (max-width: 400px) {
+    font-size: font-size2(font-size-mobileS);
+  }      
+}
+
+@mixin responsiveTextS {
+  font-size: font-size2(font-size-laptop);
+  
+  @media screen and (max-width: 1680px) {
+    font-size: font-size2(font-size-tablet);
+  };
+  @media screen and (max-width: 1024px) {
+    font-size: font-size2(font-size-mobile);
+  };
+  @media screen and (max-width: 700px) {
+    font-size: font-size2(font-size-mobileS);
+  };
+  @media screen and (max-width: 400px) {
+    font-size: 14px;
+  }      
+}
+
+@mixin responsiveTitle{
+  font-size: font-size2(font-size-desktopL);
+ 
+  @media screen and (max-width: 1680px) {
+    font-size: font-size2(font-size-desktop);
+  };
+  @media screen and (max-width: 1024px) {
+    font-size: font-size2(font-size-laptop);
+  };
+  @media screen and (max-width: 700px) {
+    font-size: font-size2(font-size-tablet);
+  };
+  @media screen and (max-width: 400px) {
+    font-size: font-size2(font-size-mobile);
+  }      
+}

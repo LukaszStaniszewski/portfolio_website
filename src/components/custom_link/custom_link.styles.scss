@@ -1,7 +1,6 @@
 .default-link {
     color: var(--color-text-primary-m);
-    width: 200px;
-    min-width: fit-content;
+    width: max-content;
     height: inherit;
     background-color: var(--color-background-secondary-m);
     display: flex;
@@ -10,6 +9,7 @@
     cursor: pointer;
     margin: 0px 1px;
     border: none;
+    padding: 0 calc(5px + 2vw);
 
     &.header-link-clicked {
         background-color: var(--color-background-secondary);

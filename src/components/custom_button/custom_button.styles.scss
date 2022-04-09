@@ -43,11 +43,6 @@
     }
     &:hover {
         --y: var(--move-hover);
-        --move: -2px;
-        --shadow-active: 0 3px 1px rgba(0, 0, 0, .2);
-        span {
-            animation: -2px .5s linear var(--d);
-        }
     }
   
     &.drive {
@@ -60,7 +55,18 @@
             }
         }
     }
+
+    &.disabled {
+        opacity: 0.3;
+        transform: none;
+        &:hover {
+            span {
+                animation: none;
+            }
+        }
+    }
 }
+
 
 
 @keyframes drive {

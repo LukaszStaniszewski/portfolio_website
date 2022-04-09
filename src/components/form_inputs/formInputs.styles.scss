@@ -2,29 +2,27 @@
 
 $sub-color: var(--color-text-primary-m);
 $main-color: var(--color-text-primary);
-$font-size: font-size2(font-size-tablet);
-$font-shrink: font-size2(font-size-mobile);
 
 @mixin shrinkLabel {
-  top: -27px;
-  font-size: $font-shrink;
+  top: -29px;
   color: $main-color;
+  @include responsiveTextS;
 }
 
 .form-input-container {
+    
     position: relative;
-    margin: 40px 0;
+    margin: 40px 0 30px 0;
     .form-input {
         background: none;
-        // background-color: var(--color-switch-button);
         background-color: white;
         color: $sub-color;
-        font-size: $font-size;
         padding: 10px 10px 10px 5px;
         display: block;
         width: 100%;
         border-bottom: 1px solid $sub-color;
         margin: 25px 0;
+        @include responsiveTextS;
         
         &:focus {
             outline: none;
@@ -41,7 +39,7 @@ $font-shrink: font-size2(font-size-mobile);
         
         .form-input-label {
         color: $sub-color;
-        font-size: $font-size;
+    
         font-weight: normal;
         position: absolute;
         pointer-events: none;

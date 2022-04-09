@@ -5,7 +5,8 @@ import "./row_counter.styles.scss"
 
 const RowCounter = ({className, number}) => {
 
-    const array = [...Array(50).keys()];
+    const array = [...Array(50)]
+    array.forEach((value, index) =>  array.push(index+1))
 
  
     return (
