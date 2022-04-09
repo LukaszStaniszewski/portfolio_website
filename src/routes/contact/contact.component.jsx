@@ -25,10 +25,9 @@ const formRef = useRef()
 const  handleChange = (event) => {
     const {value, name} = event.target
     setInputValue({...inputValue, [name]: value})
-    
-    if(name !== "message") return
+    if(!value) return setValidatedData(defaultValidatedData)
+    if(name !== "message") return 
     const validatedData = validation({message : value})
-    if(!validatedData) return
     setValidatedData(validatedData)
 }
 
@@ -84,7 +83,11 @@ const handleSubmit = async (event) => {
                     required
                 />
                {
-                <CustomButton className={`${!correct && 'disabled'}`} disabled={!correct}  >Send{`\xa0`}Message</CustomButton>
+                <CustomButton 
+                 className={`${!correct && 'disabled'}`}
+                 disabled={!correct}
+                >SEND
+                </CustomButton>
                }
             </form>
             {isFetching && <div className="spinner">

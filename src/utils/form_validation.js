@@ -4,7 +4,7 @@ let validationMessage = {
 }
 
 export const validation = ({message}) => {
-   if(!message) return 
+   if(!message) return validationMessage
    
    const words = message.split(" ")
    for (let i = 0; i < words.length; i++) {
