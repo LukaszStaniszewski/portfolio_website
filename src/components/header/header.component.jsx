@@ -11,7 +11,8 @@ import './header.styles.scss'
 
 const Header = () => {
     const currentLocation = useLocation();
-    const [active, setActive] = useState(currentLocation.pathname)
+    const [hamburger, setHamburger] = useState(false)
+    const [linkActive, setActive] = useState(currentLocation.pathname)
     const [theme, setTheme] = useState(() => {
         const saved = localStorage.getItem("theme")
         const initialValue = JSON.parse(saved)
@@ -24,15 +25,20 @@ const Header = () => {
         document.documentElement.setAttribute("data-theme", theme)
         setThemeContext(theme)
     }, [theme])
+
     const handleClick = (prop) => {
         switch(prop) {
             case '/':
+                setHamburger(false)
                 return setActive("/")
             case "/readme":
+                setHamburger(false)
                 return setActive("/readme")
             case "/projects":
+                setHamburger(false)
                 return setActive("/projects")
             case "/contact":
+                setHamburger(false)
                 return setActive("/contact")
             default:
                 return setActive("/")
@@ -49,21 +55,32 @@ const Header = () => {
             return document.documentElement.removeAttribute("data-theme")
         }
     }
+ 
     return (
    
         <nav className="header">
+
             
-           <div className="header__link-container">
-                <CustomLink classType='header' active={active} onClick={()=> handleClick('/')} to='/'>Home.js</CustomLink>
-                <CustomLink classType='header' active={active} onClick={()=> handleClick('/readme')} to='/readme'>README.md</CustomLink>
-                <CustomLink classType='header' active={active} onClick={()=> handleClick('/projects')} to='/projects'>Projects</CustomLink>
-                <CustomLink classType='header' active={active} onClick={()=> handleClick('/contact')} to='/contact'>Contact</CustomLink>
+           <div className={`header__link-container ${hamburger && "overlay" } `}>
+                <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/')} to='/'>Home.js</CustomLink>
+                <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/readme')} to='/readme'>README.md</CustomLink>
+                <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/projects')} to='/projects'>Projects</CustomLink>
+                <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/contact')} to='/contact'>Contact</CustomLink>
            </div>
 
             <div className="header__toogle-theme-container">
                 {theme ? <MoonLight/> : <MoonDark/>}
                 <button className={`switch-theme ${theme}`} onClick={switchTheme}/>
                 {theme ? <SunLight/> : <SunDark/>} 
+            </div>
+           
+            <div className={`header__hamburger ${hamburger && "open"}`} onClick={()=> setHamburger(!hamburger)}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     )   
