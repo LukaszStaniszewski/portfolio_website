@@ -1,36 +1,89 @@
+@import "../../scss/index.scss";
+
 .home-container {
-    grid-column: center-start / center-end;
-    grid-row: center-start/ [container-end];
-    min-height: fit-content;
-    margin: 10px 20px;
-    display:flex;
+    @include container-basic(font-size(font-size-desktopL));
     align-items: center;
-    font-size: 36px;
-    .home-rows {
-       width: 20px;
-       color: var(--color-text-primary);
-
-       .home-row{
-           padding: 3px;
-       }
-    }
-
+    @include responsiveTitle;
     .home-welcome-text {
-        margin-left: 80px;
-   
+        font-size: 1.15em;
+        margin-left: calc(15px + 2.5vw);
+        position: relative;
         span {
-            display: inline-flex;
-            
-
+            display: inline-block;
+            text-indent: 10px;
+        }
+        span:nth-child(8),
+        span:nth-child(22) {
+            text-indent: 40px;
         }
 
-        // span:nth-child(2),
-        // span:nth-child(5) {
-        //     text-indent: 40px;
-        // }
-        // span:nth-child(3),
-        // span:nth-child(4){
-        //     text-indent: 80px;
-        // }
+        span:nth-child(12),
+        span:nth-child(17) {
+            text-indent: 80px;
+        }
+        
+        span:nth-child(9),
+        span:nth-child(13),
+        span:nth-child(20) {
+            text-indent: 0;
+        }
+        
+        .text-blink {
+            position: absolute;
+            display: block;
+            top: 160px;
+            right: -20px;
+        }
+        
+    }
+
+    @include media-desktop {
+       & {
+            .home-welcome-text {
+                .text-blink {
+                    top: 140px;
+                }
+            }
+        };
+    }
+
+    @include media-laptop {
+       & {
+            .home-welcome-text {
+                .text-blink {
+                    top: 130px;
+                }
+            }
+        };
+    }
+    @include media-tablet {
+        & {
+            .home-welcome-text {
+                .text-blink {
+                    top: 110px;
+                }
+            }
+           
+        }
+    }
+
+    @include media-mobile {
+       & {
+           margin: 10px 5px;
+
+            .home-welcome-text {
+                
+
+                .text-blink {
+                    top: 84px;
+                    }
+            };
+ 
+         } 
+    }
+
+    .home-rows {
+        width: 10px;
+        font-size: 1.2em;
     }
 }

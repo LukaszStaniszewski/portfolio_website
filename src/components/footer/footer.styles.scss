@@ -1,0 +1,8 @@
+.footer-container {
+    grid-column: container-start / container-end;
+    background-color: var(--color-text-primary-m);
+    width: 100%;
+    height: 30px;
+    box-shadow: 0 -4px 20px -2px rgba(var(--color-box-shadow), .4);
+   
+}

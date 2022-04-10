@@ -1,4 +1,7 @@
-
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Menlo, Monaco, 'Courier New', monospace;
@@ -17,5 +20,7 @@ body {
     padding: 0;
     margin: 0;
   }
+
+  
 
   

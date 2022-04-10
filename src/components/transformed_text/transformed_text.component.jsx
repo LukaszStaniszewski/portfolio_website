@@ -1,47 +1,21 @@
-import { Fragment, useEffect } from "react"
+import React , { Fragment} from "react"
 
 import "./transformed_text.styles.scss"
 
-// const TransformedText = ({text, color, ...otherProps}) => {
-//     // useEffect(() => {
-//     //     document.querySelector(".lala1").innerHTML = text
-//     // }, [])
-//    const splitText = text.split(" ");
-//     console.log(splitText)
-//     return (
-//     // <div className="lala1" {...otherProps} ></div>
-//     <Fragment>
-//     {
-//         splitText.map((word, index) => {
-//           return  <span key={index} className={color[word] ? `${color[word]}`: 'text-quaternary'}>{word}</span>
-//         //   return  <div key={index} style={{color: `var(--color-text-primary)`}}>{word}</div>
-//         })
-//     }
-  
-//     </Fragment>
-//     )
-// }
-
-// export default TransformedText
-
 const TransformedText = ({text, color, ...otherProps}) => {
-  // useEffect(() => {
-  //     document.querySelector(".lala1").innerHTML = text
-  // }, [])
- const splitText = text.split(" ");
-  console.log(splitText)
-  return (
-  // <div className="lala1" {...otherProps} ></div>
-  <Fragment>
-  {
-      splitText.map((word, index) => {
-        return  <span key={index} className={color[word] ? `${color[word]}`: 'text-quaternary'}>{word}</span>
-      //   return  <div key={index} style={{color: `var(--color-text-primary)`}}>{word}</div>
-      })
-  }
 
+ const splitText = text.split(' ');
+  return (
+  
+  <Fragment>
+    {
+      splitText.map((word, index) => {
+        if(word === "<br/>")  return  <br key={index} />
+        return  <span key={index} className={color[word] ? `${color[word]}`: 'text-quaternary'} {...otherProps}>{word}</span>
+      })
+    }
   </Fragment>
   )
 }
 
-export default TransformedText
+export default React.memo(TransformedText)

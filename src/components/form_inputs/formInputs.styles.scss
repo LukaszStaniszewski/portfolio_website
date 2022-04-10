@@ -1,0 +1,56 @@
+@import "../../scss/index.scss";
+
+$sub-color: var(--color-text-primary-m);
+$main-color: var(--color-text-primary);
+
+@mixin shrinkLabel {
+  top: -29px;
+  color: $main-color;
+  @include responsiveTextS;
+}
+
+.form-input-container {
+    
+    position: relative;
+    margin: 40px 0 30px 0;
+    .form-input {
+        background: none;
+        background-color: white;
+        color: $sub-color;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $sub-color;
+        margin: 25px 0;
+        @include responsiveTextS;
+        
+        &:focus {
+            outline: none;
+        }
+        
+        &:focus ~ .form-input-label {
+            @include shrinkLabel();
+        }
+        }
+        
+        input[type='password'] {
+        letter-spacing: 0.3em;
+        }
+        
+        .form-input-label {
+        color: $sub-color;
+    
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 300ms ease all;
+        
+        &.shrink {
+            @include shrinkLabel();
+        }
+        }
+        
+}
+
