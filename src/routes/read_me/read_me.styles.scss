@@ -6,6 +6,7 @@
 
     .readme-row {
         @include responsiveText;
+        width: 10px;
     }
     
     .readme-content {

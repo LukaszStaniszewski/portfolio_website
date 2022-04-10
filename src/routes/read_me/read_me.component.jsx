@@ -20,7 +20,7 @@ const ReadMe = () => {
     const {currentTheme} = useThemeContext()
     return (
         <section className="readme-container">
-            <RowCounter className="readme-row" quantity={20}/>
+            <RowCounter className="readme-row"/>
             <div className="readme-content">
                 <div>## About me</div>
                <div className="readme-content--introduction">
