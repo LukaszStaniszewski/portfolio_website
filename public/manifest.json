@@ -1,7 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "start_url": ".",
+  "short_name": "Łukasz Staniszewski",
+  "name": "Portfolio web site that contains information about Łukasz Staniszewski career.",
+  "start_url": "https://staniszewski.contact",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
