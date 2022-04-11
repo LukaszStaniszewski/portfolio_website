@@ -6,8 +6,9 @@
     @include responsiveText;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     color: var(--color-text-secondary);
+
     
     &--title {
         @include responsiveTitle;

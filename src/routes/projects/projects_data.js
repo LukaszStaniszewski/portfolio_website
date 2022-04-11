@@ -1,7 +1,7 @@
 const PROJECTS_DATA = [
     {
         title: "Book World",
-        text: "This project is an e-commerce webesite. It has sign in / sign up functionality, abbility to browse thrugh various shoping categories, possibility to add items to cart and pay for them with a payment card.",
+        text: "This project is an e-commerce website. It has sign in / sign up functionality, ability to browse through various shopping categories, possibility to add items to cart and pay for them with a payment card.",
         technologies: ['HTML', "Sass", "JavaScript", "React", "React-Redux", "Sagas", "Firebase"], 
         image: "https://i.ibb.co/wCv2hPT/projects-presentation-Book-Word-ver4.png",
         url: "https://www.bookworld.staniszewski.contact/",
@@ -18,7 +18,7 @@ const PROJECTS_DATA = [
     },
     {
         title: "Parcel locker",
-        text: "It is a live form validator, with possibility to swap beetwen polish and english language. Application made to showcase knowladge and skills in vanilla javascript.",
+        text: "It is a live form validator, with possibility to swap between polish and english language. Application made to showcase knowledge and skills in vanilla JavaScript.",
         technologies: ["CSS", "JavaScript"],
         image: "https://i.ibb.co/ZBsWfm3/projects-presentation-Parcel-locer-ver2.png",
         url: "https://lukaszstaniszewski.github.io/paczkomat__parcel-locker/",

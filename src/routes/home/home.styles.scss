@@ -45,8 +45,9 @@
     @include media-desktop {
        & {
             .home-welcome-text {
+                margin: 27px 0 0 80px;
                 .text-blink {
-                    top: 200px;
+                    top: 210px;
                 }
             }
         };
@@ -55,6 +56,7 @@
     @include media-laptop {
        & {
             .home-welcome-text {
+                margin: 60px 0 0 80px;
                 .text-blink {
                     top: 163px;
                 }
