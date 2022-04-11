@@ -5,8 +5,8 @@
     align-items: center;
     @include responsiveTitle;
     .home-welcome-text {
-        font-size: 1.15em;
-        margin-left: calc(15px + 2.5vw);
+        font-size: 1.5em;
+        margin: 45px 0 0 80px;
         position: relative;
         span {
             display: inline-block;
@@ -31,17 +31,22 @@
         .text-blink {
             position: absolute;
             display: block;
-            top: 160px;
+            top: 210px;
             right: -20px;
         }
         
+    }
+
+    .home-rows {
+        width: 10px;
+        font-size: 1.5em;
     }
 
     @include media-desktop {
        & {
             .home-welcome-text {
                 .text-blink {
-                    top: 140px;
+                    top: 200px;
                 }
             }
         };
@@ -51,7 +56,7 @@
        & {
             .home-welcome-text {
                 .text-blink {
-                    top: 130px;
+                    top: 163px;
                 }
             }
         };
@@ -60,7 +65,7 @@
         & {
             .home-welcome-text {
                 .text-blink {
-                    top: 110px;
+                    top: 140px;
                 }
             }
            
@@ -75,15 +80,47 @@
                 
 
                 .text-blink {
-                    top: 84px;
-                    }
+                    top: 120px;
+                }
             };
  
          } 
     }
 
-    .home-rows {
-        width: 10px;
-        font-size: 1.2em;
+    @media screen and (max-width: 540px) {
+        &{
+            .home-welcome-text {
+                font-size: 1.3em;
+                margin: 60px 0 0 40px;
+
+                .text-blink {
+                    top: 105px;
+                }
+            }    
+        }
+
+        .home-rows {
+            font-size: 1.4em;
+        }
     }
+
+    @include media-mobileS {
+        & {
+            height: calc(100vh - 120px);
+            .home-welcome-text {
+                font-size: 1.25em;
+               margin: auto;
+               
+
+                .text-blink {
+                    top: 90px;
+                }
+            }
+            .home-rows {
+                display: none;
+            }
+        }
+    }
+
+    
 }
