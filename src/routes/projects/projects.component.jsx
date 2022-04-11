@@ -9,7 +9,7 @@ import "./projects.styles.scss"
 
 const Projects = () => {
 const {currentTheme} = useThemeContext()
-const executeScroll = () =>  window.scrollTo(0, (window.innerHeight + 30))
+const executeScroll = () =>  window.scrollTo(0, (window.innerHeight))
 
 
 

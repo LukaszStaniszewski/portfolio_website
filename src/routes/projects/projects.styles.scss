@@ -3,7 +3,7 @@
 .projects-container {
     @include container-basic(font-size2(font-size-desktopL));
     color: var(--color-text-secondary);
-    
+    height: max-content !important;
     justify-content: center;
     align-items: center;
     letter-spacing: .5px;
