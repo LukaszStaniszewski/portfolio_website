@@ -3,16 +3,24 @@ const PROJECTS_DATA = [
         title: "Book World",
         text: "This project is an e-commerce website. It has sign in / sign up functionality, ability to browse through various shopping categories, possibility to add items to cart and pay for them with a payment card.",
         technologies: ['HTML', "Sass", "JavaScript", "React", "React-Redux", "Sagas", "Firebase"], 
-        image: "https://i.ibb.co/wCv2hPT/projects-presentation-Book-Word-ver4.png",
+        image: "https://i.ibb.co/mqCzmrC/book-word-mockup.png",
         url: "https://www.bookworld.staniszewski.contact/",
         github: "https://github.com/LukaszStaniszewski/book-world"
+    },
+    {
+        title: "Portfolio Website",
+        text:"It is this website",
+        technologies: ["Sass", "JavaScript", "React"],
+        image: "https://i.ibb.co/xCMfrVY/portfolio-website-mockup-ver2.png",
+        url: "https://lukaszstaniszewski.netlify.app",
+        github: "https://github.com/LukaszStaniszewski/portfolio_website"
     },
     {
         title: "Barber Shop",
         text: "It is static, fully responsive website, advertising a barber shop. I made this application to showcase knowledge and skills in Sass / CSS",
         technologies: ["HTML", "Sass", "JavaScript"],
         image: 'https://i.ibb.co/BGHW5hM/projects-presentation-Barber-Shop-ver2.png',
-        url: "https://lukaszstaniszewski.github.io/Barber-shop/",
+        url: "https://i.ibb.co/xG6RZTD/barber-shop-mockup.png",
         github: "https://github.com/LukaszStaniszewski/Barber-shop"
 
     },

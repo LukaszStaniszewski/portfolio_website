@@ -7,10 +7,13 @@ import {ReactComponent as SunDark} from "../../assets/theme-switch/sun-dark.svg"
 import {ReactComponent as SunLight} from "../../assets/theme-switch/sun-light.svg"
 import CustomLink from "../custom_link/custom_link.component"
 import { useThemeContext} from "../../context/theme/theme.context"
+import { useUrlContext } from "../../context/url/url.context"
 import './header.styles.scss'
 
 const Header = () => {
     const currentLocation = useLocation();
+    const {currentUrl, setUrl} = useUrlContext();
+    const {setThemeContext} = useThemeContext()
     const [hamburger, setHamburger] = useState(false)
     const [linkActive, setActive] = useState(currentLocation.pathname)
     const [theme, setTheme] = useState(() => {
@@ -19,12 +22,18 @@ const Header = () => {
         return initialValue || null
     })
   
-    const {setThemeContext} = useThemeContext()
     useEffect(() => {
         localStorage.setItem("theme", JSON.stringify(theme))
         document.documentElement.setAttribute("data-theme", theme)
         setThemeContext(theme)
+       
     }, [theme])
+
+    useEffect(() => {
+        if (!currentUrl) return
+        setActive(currentUrl)
+        setUrl(null)
+    }, [currentUrl])
 
     const handleClick = (prop) => {
         switch(prop) {
@@ -47,7 +56,6 @@ const Header = () => {
 
     const switchTheme = () => {
         if(!theme) {
-            
             document.documentElement.setAttribute("data-theme", theme)
             return setTheme("light")
         } else {
@@ -58,9 +66,7 @@ const Header = () => {
  
     return (
    
-        <nav className="header">
-
-            
+        <nav className="header">  
            <div className={`header__link-container ${hamburger && "overlay" } `}>
                 <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/')} to='/'>Home.js</CustomLink>
                 <CustomLink classType='header' active={linkActive} onClick={()=> handleClick('/readme')} to='/readme'>README.md</CustomLink>

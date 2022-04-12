@@ -9,6 +9,7 @@ import {ReactComponent as GitLogoLight} from "../../assets/tech-skills/git-logo-
 import RowCounter from "../../components/row_counter/row_counter.component"
 import TransformedText from "../../components/transformed_text/transformed_text.component";
 import { useThemeContext } from "../../context/theme/theme.context"
+import { useUrlContext } from "../../context/url/url.context"
 import "./read_me.styles.scss"
 
 const TEXT_COLORS = {
@@ -18,6 +19,7 @@ const TEXT_COLORS = {
 
 const ReadMe = () => {
     const {currentTheme} = useThemeContext()
+    const {setUrl} = useUrlContext()
     return (
         <section className="readme-container">
             <RowCounter className="readme-row"/>
@@ -26,7 +28,7 @@ const ReadMe = () => {
                <div className="readme-content--introduction">
                     <span className="part1">When I've started to learn programming, realized that process of developing application gives me that feeling of enthusiasm. The need to think about it from moring till evening is more important then the world that surrounds me. This is my attitude towards programming.</span>
                     <span className="part2">I live in Poland in Warsaw and I am looking for my first job as frontend developer. If you have any questions contact me. 
-                    <Link to="/contact" className="contact-button"> 
+                    <Link to="/contact" onClick={() => setUrl("/contact")} className="contact-button"> 
                         <TransformedText style={{fontFamily: "Menlo"}} text="Hi ()" color={TEXT_COLORS}/>
                     </Link>
                     </span>
@@ -66,9 +68,7 @@ const ReadMe = () => {
                             }
                             <span>GitHub</span>
                         </div>
-                    </div>
-
-               
+                    </div>        
             </div>
         </section>
     )

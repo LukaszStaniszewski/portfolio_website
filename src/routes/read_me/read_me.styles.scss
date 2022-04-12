@@ -43,19 +43,20 @@
                             
             }
             .contact-button {
-                display: none;
+                opacity: 0.9;
                 margin-left: 10px;
                 cursor: pointer;
+                display: inline-block;
+                animation: shake 1.4s ease-in-out 2 forwards;
+
+                &:hover,
+                &:active {
+                    opacity: 1;
+
+                }
                 
             }
-            &:hover,
-            &:active {
-                .contact-button {
-                    display: inline-block;
-                    animation: shake 1.4s ease-in-out forwards
-                    
-                }         
-            }        
+               
         }
       
         &__logos-container {
