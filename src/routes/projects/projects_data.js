@@ -12,7 +12,7 @@ const PROJECTS_DATA = [
         text:"It is this website",
         technologies: ["Sass", "JavaScript", "React"],
         image: "https://i.ibb.co/xCMfrVY/portfolio-website-mockup-ver2.png",
-        url: "https://lukaszstaniszewski.netlify.app",
+        url: "https://www.lukaszstaniszewski.com",
         github: "https://github.com/LukaszStaniszewski/portfolio_website"
     },
     {
