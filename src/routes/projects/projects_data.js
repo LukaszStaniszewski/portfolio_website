@@ -19,8 +19,8 @@ const PROJECTS_DATA = [
         title: "Barber Shop",
         text: "It is static, fully responsive website, advertising a barber shop. I made this application to showcase knowledge and skills in Sass / CSS",
         technologies: ["HTML", "Sass", "JavaScript"],
-        image: 'https://i.ibb.co/BGHW5hM/projects-presentation-Barber-Shop-ver2.png',
-        url: "https://i.ibb.co/xG6RZTD/barber-shop-mockup.png",
+        image: 'https://i.ibb.co/xG6RZTD/barber-shop-mockup.png',
+        url: "https://lukaszstaniszewski.github.io/Barber-shop/",
         github: "https://github.com/LukaszStaniszewski/Barber-shop"
 
     },
