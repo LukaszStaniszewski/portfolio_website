@@ -4,7 +4,7 @@ const PROJECTS_DATA = [
         text: "This project is an e-commerce website. It has sign in / sign up functionality, ability to browse through various shopping categories, possibility to add items to cart and pay for them with a payment card.",
         technologies: ['HTML', "Sass", "JavaScript", "React", "React-Redux", "Sagas", "Firebase"], 
         image: "https://i.ibb.co/mqCzmrC/book-word-mockup.png",
-        url: "https://www.bookworld.staniszewski.contact/",
+        url: "https://book-world.lukaszstaniszewski.com",
         github: "https://github.com/LukaszStaniszewski/book-world"
     },
     {
