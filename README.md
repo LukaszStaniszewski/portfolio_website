@@ -3,7 +3,7 @@
 
 A personal portfolio website, build with React and JavaScript.
 
-[Here you can see the website live](https://lukaszstaniszewski.netlify.app/).
+[Here you can see the website live](https://www.lukaszstaniszewski.com).
 
 
 ### Inspirations :star:
