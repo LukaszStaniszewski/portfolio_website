@@ -1,23 +1,28 @@
-import { Routes, Route} from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 
-import Navigation from "./routes/navigation/navigation.component";
-import Home from './routes/home/home.component';
-import ReadMe from './routes/read_me/read_me.component';
-import Projects from './routes/projects/projects.component';
-import Contact from './routes/contact/contact.component';
+import { Routes, Route} from 'react-router-dom';
+import Spinner from './components/spinner/spinner.component';
+
+const Navigation = lazy(() =>import("./routes/navigation/navigation.component"));
+const Home = lazy(() => import('./routes/home/home.component'));
+const ReadMe = lazy(() =>import('./routes/read_me/read_me.component'));
+const Projects = lazy(() => import('./routes/projects/projects.component'));
+const Contact = lazy(() =>import('./routes/contact/contact.component'));
 
 function App() {
 
   return (
     <div className="main-container">
-      <Routes>
-        <Route path='/' element={<Navigation/>}>
-          <Route index element={<Home/>}/>
-          <Route path='readme' element={<ReadMe/>}/>
-          <Route path='projects' element={<Projects/>}/>
-          <Route path='contact' element={<Contact/>}/>
-        </Route>
-      </Routes>
+      <Suspense fallback={<Spinner/>}>
+        <Routes>
+          <Route path='/' element={<Navigation/>}>
+            <Route index element={<Home/>}/>
+            <Route path='readme' element={<ReadMe/>}/>
+            <Route path='projects' element={<Projects/>}/>
+            <Route path='contact' element={<Contact/>}/>
+          </Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { sendEmail } from "../../utils/emailjs.utils";
 import FormInputs from "../../components/form_inputs/formInputs.component";
 import CustomButton from "../../components/custom_button/custom_button.component";
 import { validation} from "../../utils/form_validation";
+import Spinner from '../../components/spinner/spinner.component';
 
 import "./contact.styles.scss"
 const defaultInputValues = {
@@ -90,10 +91,7 @@ const handleSubmit = async (event) => {
                 </CustomButton>
                }
             </form>
-            {isFetching && <div className="spinner">
-                            <div className="spinner-inner" ></div>
-                            </div> 
-            }
+            {isFetching && <Spinner/> }
             <div className="contact-container--validation-message">{
                  validationMessage.length ? validationMessage : ''}
             </div>
