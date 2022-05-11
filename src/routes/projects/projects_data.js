@@ -1,9 +1,14 @@
+import bookWord from "../../assets/project-img/bookWord-mockup.png"
+import barberShop from "../../assets/project-img/barber-shop-mockup.png"
+import portfolioWebsite from "../../assets/project-img/portfolio-website-mockup.png"
+
+
 const PROJECTS_DATA = [
     {
         title: "Book World",
         text: "This project is an e-commerce website. It has sign in / sign up functionality, ability to browse through various shopping categories, possibility to add items to cart and pay for them with a payment card.",
         technologies: ['HTML', "Sass", "JavaScript", "React", "React-Redux", "Sagas", "Firebase"], 
-        image: "https://i.ibb.co/mqCzmrC/book-word-mockup.png",
+        image: bookWord,
         url: "https://book-world.lukaszstaniszewski.com",
         github: "https://github.com/LukaszStaniszewski/book-world"
     },
@@ -11,7 +16,7 @@ const PROJECTS_DATA = [
         title: "Portfolio Website",
         text:"It is this website",
         technologies: ["Sass", "JavaScript", "React"],
-        image: "https://i.ibb.co/xCMfrVY/portfolio-website-mockup-ver2.png",
+        image: portfolioWebsite,
         url: "https://www.lukaszstaniszewski.com",
         github: "https://github.com/LukaszStaniszewski/portfolio_website"
     },
@@ -19,7 +24,7 @@ const PROJECTS_DATA = [
         title: "Barber Shop",
         text: "It is static, fully responsive website, advertising a barber shop. I made this application to showcase knowledge and skills in Sass / CSS",
         technologies: ["HTML", "Sass", "JavaScript"],
-        image: 'https://i.ibb.co/xG6RZTD/barber-shop-mockup.png',
+        image: barberShop,
         url: "https://lukaszstaniszewski.github.io/Barber-shop/",
         github: "https://github.com/LukaszStaniszewski/Barber-shop"
 

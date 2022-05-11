@@ -1,6 +1,5 @@
 import {ReactComponent as GitLogo} from "../../assets/tech-skills/git-logo.svg";
 import {ReactComponent as GitLogoLight} from "../../assets/tech-skills/git-logo-light.svg";
-
 import { useThemeContext} from "../../context/theme/theme.context";
 import CustomButton from "../custom_button/custom_button.component";
 import "./project.styles.scss"
@@ -28,10 +27,9 @@ const Project = ({data}) => {
                     :  <GitLogo className="git-logo"/>
                 }
                 </a>
-            </div >
+            </div>
         </div>
-        <div className="project-image" style={{backgroundImage: `url(${image})`}}>
-        </div>
+        <div className="project-image" style={{backgroundImage: `url(${image})`}}/>
     </div>
     )
 }
