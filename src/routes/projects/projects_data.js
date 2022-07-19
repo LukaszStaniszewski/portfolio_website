@@ -6,7 +6,7 @@ import mainProject from "../../assets/project-img/main-project-mockup.svg"
 
 const mockup = [
    { 
-      title: "Book World",
+      title: "Main Project",
       text: "This is full stack app for collecting whatever user wants. It has authentication build with JSON Web Tokens, live comment updates, search bar based on MongoDB search index.",
       technologies: ["Tailwindcss", "TypeScript", "React", "React-Redux", "Sagas", "Node.js: Express, MongoDB"], 
       image: mainProject,
