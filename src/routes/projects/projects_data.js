@@ -1,9 +1,18 @@
 import bookWord from "../../assets/project-img/bookWord-mockup.png"
 import barberShop from "../../assets/project-img/barber-shop-mockup.png"
 import portfolioWebsite from "../../assets/project-img/portfolio-website-mockup.png"
+import mainProject from "../../assets/project-img/main-project-mockup.svg"
 
 
-const PROJECTS_DATA = [
+const mockup = [
+   { 
+      title: "Book World",
+      text: "This is full stack app for collecting whatever user wants. It has authentication build with JSON Web Tokens, live comment updates, search bar based on MongoDB search index.",
+      technologies: ["Tailwindcss", "TypeScript", "React", "React-Redux", "Sagas", "Node.js: Express, MongoDB"], 
+      image: mainProject,
+      url: "https://main-app-collections.herokuapp.com",
+      github: "https://github.com/LukaszStaniszewski/main-project",
+   },
     {
         title: "Book World",
         text: "This project is an e-commerce website. It has sign in / sign up functionality, ability to browse through various shopping categories, possibility to add items to cart and pay for them with a payment card.",
@@ -38,5 +47,7 @@ const PROJECTS_DATA = [
         github: "https://github.com/LukaszStaniszewski/paczkomat__parcel-locker"
     }
 ]
+
+const PROJECTS_DATA = Object.freeze(mockup)
 
 export default PROJECTS_DATA

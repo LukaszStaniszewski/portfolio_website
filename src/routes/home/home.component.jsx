@@ -26,12 +26,11 @@ const Home = () => {
     const welcomeText = 'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }'
 
     useEffect(() => {
-       
-        return () => setState();
-    }, [])
 
-        
-      
+      return () => setState();
+    }, [])
+    
+  
     setTimeout(()=> {
         if(state) return setState(null)
        if(!state) return setState("|")
