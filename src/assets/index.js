@@ -1,0 +1,12 @@
+export { ReactComponent as JsLogo } from "./tech-skills/js-logo.svg";
+export { ReactComponent as SassLogo } from "./tech-skills/sass-logo.svg";
+export { ReactComponent as ReactLogo } from "./tech-skills/react-logo.svg";
+export { ReactComponent as TsLogo } from "./tech-skills/ts-logo.svg";
+export { ReactComponent as ReduxLogo } from "./tech-skills/redux-logo.svg";
+export { ReactComponent as GitLogo } from "./tech-skills/git-logo.svg";
+export { ReactComponent as GitLogoLight } from "./tech-skills/git-logo-light.svg";
+export { ReactComponent as NodeLogo } from "./tech-skills/node.js-logo.svg";
+export { ReactComponent as ExpressLogo } from "./tech-skills/express-logo.svg";
+export { ReactComponent as ExpressLogoLight } from "./tech-skills/express-logo-light.svg";
+export { ReactComponent as MongoDbLogo } from "./tech-skills/mongodb-logo.svg";
+export { ReactComponent as TailwindLogo } from "./tech-skills/tailwind-logo.svg";
