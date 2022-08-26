@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useRef, useEffect, useState } from "react";
 
 import {
    JsLogo,
@@ -27,11 +28,18 @@ const TEXT_COLORS = {
 };
 
 const ReadMe = () => {
+   const [divHight, setDivHight] = useState();
    const { currentTheme } = useThemeContext();
    const { setUrl } = useUrlContext();
+   const ref = useRef(null);
+
+   useEffect(() => {
+      setDivHight(ref.current.offsetHeight);
+   }, [ref]);
+
    return (
-      <section className="readme-container">
-         {/* <RowCounter className="readme-row" /> */}
+      <section ref={ref} className="readme-container">
+         <RowCounter containerHight={divHight} className="readme-row" />
          <div className="readme-content">
             <div>## About me</div>
             <div className="readme-content--introduction">
