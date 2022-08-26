@@ -21,12 +21,6 @@
       z-index: 2;
       @include media-tablet {
          & {
-            top: 55vh;
-         }
-      }
-
-      @include media-mobile {
-         & {
             visibility: hidden;
          }
       }
