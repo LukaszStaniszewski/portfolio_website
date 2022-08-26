@@ -3,6 +3,8 @@
 
 .readme-container {
    @include container-basic(font-size2(font-size-desktopL));
+   min-height: calc(100vh - 120px);
+   height: max-content;
    .readme-row {
       @include responsiveText;
       width: 10px;
@@ -98,11 +100,6 @@
                }
             }
          }
-      }
-   }
-   @media screen and (max-width: 1400px) {
-      & {
-         height: 120vh;
       }
    }
 }

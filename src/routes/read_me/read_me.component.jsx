@@ -31,20 +31,24 @@ const ReadMe = () => {
    const { setUrl } = useUrlContext();
    return (
       <section className="readme-container">
-         <RowCounter className="readme-row" />
+         {/* <RowCounter className="readme-row" /> */}
          <div className="readme-content">
             <div>## About me</div>
             <div className="readme-content--introduction">
                <span className="part1">
-                  When I've started to learn programming, realized that process of developing
-                  application gives me that feeling of enthusiasm. The need to think about it from
-                  moring till evening is more important then the world that surrounds me. This is my
-                  attitude towards programming.
+                  When I've started to learn programming, realized that process of
+                  developing application gives me that feeling of enthusiasm. The need to
+                  think about it from moring till evening is more important then the world
+                  that surrounds me. This is my attitude towards programming.
                </span>
                <span className="part2">
                   I live in Poland in Warsaw and I am looking for my first job as frontend
                   developer. If you have any questions contact me.
-                  <Link to="/contact" onClick={() => setUrl("/contact")} className="contact-button">
+                  <Link
+                     to="/contact"
+                     onClick={() => setUrl("/contact")}
+                     className="contact-button"
+                  >
                      <TransformedText
                         style={{ fontFamily: "Menlo" }}
                         text="Hi ()"
