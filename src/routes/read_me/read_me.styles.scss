@@ -3,7 +3,7 @@
 
 .readme-container {
    @include container-basic(font-size2(font-size-desktopL));
-   min-height: calc(100vh - 120px);
+   min-height: calc(70vh - 17px);
    height: max-content;
    .readme-row {
       @include responsiveText;
