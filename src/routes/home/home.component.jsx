@@ -21,14 +21,9 @@ const TEXT_COLORS = {
 
 const Home = () => {
    const [state, setState] = useState("|");
-   const [divHight, setDivHight] = useState();
    const ref = useRef(null);
    const welcomeText =
       'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }';
-
-   useEffect(() => {
-      setDivHight(ref.current.offsetHeight);
-   }, [ref]);
 
    useEffect(() => {
       return () => setState();
