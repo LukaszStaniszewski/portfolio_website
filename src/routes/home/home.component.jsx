@@ -21,6 +21,7 @@ const TEXT_COLORS = {
 
 const Home = () => {
    const [state, setState] = useState("|");
+   const [containerHight, setContainerHight] = useState(null);
    const ref = useRef(null);
    const welcomeText =
       'const Hi = () => { <br/> console. log ( <br/> " I am Łukasz <br/> Front End Developer " <br/> ) <br/> }';
@@ -28,6 +29,9 @@ const Home = () => {
    useEffect(() => {
       return () => setState();
    }, []);
+   useEffect(() => {
+      setContainerHight(ref.current.offsetHeight);
+   }, [ref]);
 
    setTimeout(() => {
       if (state) return setState(null);
@@ -36,7 +40,7 @@ const Home = () => {
 
    return (
       <section ref={ref} className="home-container">
-         <RowCounter className="home-rows" containerHight={ref?.current?.offsetHeight} />
+         <RowCounter className="home-rows" containerHight={containerHight} />
          <div className="home-welcome-text">
             <TransformedText text={welcomeText} color={TEXT_COLORS}>
                {" "}

@@ -8,7 +8,7 @@ const RowCounter = ({ className, containerHight }) => {
    const [rows, setRows] = useState();
 
    useEffect(() => {
-      if (!currentFontSize) return;
+      if (!currentFontSize && !containerHight) return;
       const array = [...Array(Math.round(containerHight / currentFontSize))];
 
       const rows = adjustArray(array);
