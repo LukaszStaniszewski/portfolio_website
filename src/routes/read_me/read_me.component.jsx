@@ -19,7 +19,6 @@ import {
 import RowCounter from "../../components/row_counter/row_counter.component";
 import TransformedText from "../../components/transformed_text/transformed_text.component";
 import { useThemeContext } from "../../context/theme/theme.context";
-import { useUrlContext } from "../../context/url/url.context";
 import "./read_me.styles.scss";
 
 const TEXT_COLORS = {
@@ -30,7 +29,6 @@ const TEXT_COLORS = {
 const ReadMe = () => {
    const [divHight, setDivHight] = useState();
    const { currentTheme } = useThemeContext();
-   const { setUrl } = useUrlContext();
    const ref = useRef(null);
 
    useEffect(() => {
@@ -52,11 +50,7 @@ const ReadMe = () => {
                <span className="part2">
                   I live in Poland in Warsaw and I am looking for my first job as frontend
                   developer. If you have any questions contact me.
-                  <Link
-                     to="/contact"
-                     onClick={() => setUrl("/contact")}
-                     className="contact-button"
-                  >
+                  <Link to="/contact" className="contact-button">
                      <TransformedText
                         style={{ fontFamily: "Menlo" }}
                         text="Hi ()"

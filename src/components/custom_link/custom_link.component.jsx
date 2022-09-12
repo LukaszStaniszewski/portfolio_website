@@ -1,20 +1,23 @@
-import { Link } from "react-router-dom"
-import "./custom_link.styles.scss"
-import React from "react"
+import { NavLink } from "react-router-dom";
+import "./custom_link.styles.scss";
+import React from "react";
 
-const LINK_TYPE_CLASS = {
-  header: 'header-link-clicked'
-}
+const LINK_TYPE = {
+   header: "header-link-clicked",
+};
 
-
-const CustomLink = ({children, classType, active,  ...otherProps}) => {
-
-   
-    return<Link 
-        className={`default-link ${active === otherProps.to && LINK_TYPE_CLASS[classType]}`}
+const CustomLink = ({ linkType, children, ...otherProps }) => {
+   return (
+      <NavLink
+         className={({ isActive }) =>
+            isActive ? `default-link ${LINK_TYPE[linkType]}` : "default-link"
+         }
          {...otherProps}
-        >{children}
-    </Link>
-}
+      >
+         <span>{children}</span>
+         {children}
+      </NavLink>
+   );
+};
 
 export default React.memo(CustomLink);

@@ -10,3 +10,7 @@ export { ReactComponent as ExpressLogo } from "./tech-skills/express-logo.svg";
 export { ReactComponent as ExpressLogoLight } from "./tech-skills/express-logo-light.svg";
 export { ReactComponent as MongoDbLogo } from "./tech-skills/mongodb-logo.svg";
 export { ReactComponent as TailwindLogo } from "./tech-skills/tailwind-logo.svg";
+export { ReactComponent as MoonDark } from "./theme-switch/moon-dark.svg";
+export { ReactComponent as MoonLight } from "./theme-switch/moon-light.svg";
+export { ReactComponent as SunDark } from "./theme-switch/sun-dark.svg";
+export { ReactComponent as SunLight } from "./theme-switch/sun-light.svg";

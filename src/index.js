@@ -1,24 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './context/theme/theme.context';
-import { UrlProvider } from './context/url/url.context';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "./context/theme/theme.context";
 
-import './scss/index.scss'
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./scss/index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <UrlProvider>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </UrlProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+   <React.StrictMode>
+      <BrowserRouter>
+         <ThemeProvider>
+            <App />
+         </ThemeProvider>
+      </BrowserRouter>
+   </React.StrictMode>,
+   document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
