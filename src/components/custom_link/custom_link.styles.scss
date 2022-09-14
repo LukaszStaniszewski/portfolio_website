@@ -23,7 +23,7 @@
       background-color: var(--color-text-primary-m);
       border-radius: 50%;
       transform: translateY(-50%);
-      transition: all 0.3s, background-color 0s;
+      transition: all 0.3s;
       opacity: 0;
    }
 
@@ -59,7 +59,7 @@
       height: 100%;
       background-color: var(--color-background-secondary-m);
       transform: scale(0);
-      transition: all 0.3s, background-color 0s;
+      transition: all 0.3s;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -84,11 +84,14 @@
    }
 
    &.header-link-clicked span {
+      transition-delay: 0s;
+
       opacity: 0;
    }
 
    &.header-link-clicked::after,
    &.header-link-clicked::before {
+      transition-delay: 0s;
       opacity: 0;
    }
 }

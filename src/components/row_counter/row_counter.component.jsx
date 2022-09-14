@@ -14,7 +14,7 @@ const RowCounter = ({ className, containerHight }) => {
       const rows = adjustArray(array);
 
       setRows(rows);
-   }, [currentFontSize]);
+   }, [currentFontSize, containerHight]);
 
    const adjustArray = (array) => {
       return array.map((value, index, array) => (array[index] = index + 1));

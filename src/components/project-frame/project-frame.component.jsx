@@ -20,7 +20,7 @@ const ProjectFrame = ({ data }) => {
             </ul>
             <div className="project-content__button-container">
                <CustomButton newTab={url}>Visit{`\xa0`}site</CustomButton>
-               <a href={github} target="_blank" className="github-link">
+               <a href={github} target="_blank" className="github-link" rel="noreferrer">
                   {currentTheme ? (
                      <GitLogoLight className="git-logo" />
                   ) : (

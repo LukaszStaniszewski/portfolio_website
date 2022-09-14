@@ -3,9 +3,10 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Spinner from "./components/spinner/spinner.component";
 import Home from "./routes/home/home.component";
-const Navigation = lazy(() => import("./routes/navigation/navigation.component"));
-const ReadMe = lazy(() => import("./routes/read_me/read_me.component"));
-const Projects = lazy(() => import("./routes/projects/projects.component"));
+import Navigation from "./routes/navigation/navigation.component";
+import ReadMe from "./routes/read_me/read_me.component";
+import Projects from "./routes/projects/projects.component";
+
 const Contact = lazy(() => import("./routes/contact/contact.component"));
 
 function App() {
