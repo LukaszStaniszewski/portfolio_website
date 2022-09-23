@@ -14,7 +14,7 @@ const CustomLink = ({ linkType, children, ...otherProps }) => {
          }
          {...otherProps}
       >
-         <span>{children}</span>
+         {/* <span>{children}</span> */}
          {children}
       </NavLink>
    );
