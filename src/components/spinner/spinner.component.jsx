@@ -1,9 +1,9 @@
-import "./spinner.styles.scss"
+import "./spinner.styles.scss";
 
 const Spinner = () => (
-  <div className="spinner">
-    <div className="spinner-inner" ></div>
-  </div> 
-)
+   <div className="spinner">
+      <div className="spinner-inner"></div>
+   </div>
+);
 
-export default Spinner
+export default Spinner;
