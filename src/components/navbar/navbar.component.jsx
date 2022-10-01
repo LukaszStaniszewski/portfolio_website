@@ -4,7 +4,6 @@ import { MoonDark, MoonLight, SunDark, SunLight } from "../../assets";
 import { useThemeContext } from "../../context/theme/theme.context";
 import CustomLink from "../custom_link/custom_link.component";
 import Hamburger from "../hamburger/hamurger.component";
-import Overlay from "../overlay/overlay.component";
 
 import "./navbar.styles.scss";
 
@@ -38,7 +37,11 @@ const Navbar = () => {
 
    return (
       <nav className="navbar">
-         <div className="navbar__link-container">
+         <div
+            className={`${
+               toggleHamburger && "overlay-open"
+            } navbar__link-container overlay`}
+         >
             <CustomLink linkType="header" to="/">
                Home.js
             </CustomLink>
@@ -52,7 +55,6 @@ const Navbar = () => {
                Contact
             </CustomLink>
          </div>
-         <Overlay toggle={toggleHamburger} />
 
          <div className="navbar__toogle-theme-container">
             {theme ? <MoonLight /> : <MoonDark />}
