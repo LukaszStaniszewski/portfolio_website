@@ -1,0 +1,179 @@
+@import "../../scss/index.scss";
+
+.project-container {
+   // margin-top: 10vh;
+   // margin-bottom: 15vh;
+   position: relative;
+   width: 80vw;
+   height: 65vh;
+   display: flex;
+
+   justify-content: center;
+   background: var(--card-gradient);
+   border-radius: 20px;
+   @include responsiveText;
+   @include media-mobile {
+      width: 90vw;
+   }
+
+   .project-content {
+      position: relative;
+      padding: 10px 0;
+      width: 45%;
+      right: 20%;
+      opacity: 0;
+      transition: 0.5s;
+
+      @include media-tablet {
+         width: 40%;
+      }
+
+      @include media-mobile {
+         transition: opacity 0.4s 0.1s;
+         width: 100%;
+         top: 5%;
+         right: 0;
+         line-height: max-content;
+         padding: 15px;
+      }
+
+      &--title {
+         margin: 0;
+         padding: 0;
+         @include media-mobile {
+            text-align: center;
+         }
+      }
+
+      &--about {
+         margin: 10px 0;
+      }
+
+      &--technologies {
+         margin-top: 20px;
+         list-style: none;
+      }
+
+      &__button-container {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 20px;
+         position: relative;
+         z-index: 60;
+
+         @include media-mobile {
+            justify-content: center;
+         }
+
+         .github-link {
+            margin-left: 40px;
+            display: flex;
+            cursor: pointer;
+            position: relative;
+
+            &:hover,
+            &:active {
+               transition: transform 0.5s ease;
+               transform: translateY(-4px);
+
+               &::after {
+                  content: "Check the code";
+
+                  bottom: 20px;
+                  left: 48px;
+                  display: block;
+                  font-size: font-size2(font-size-mobileS);
+                  inline-size: max-content;
+                  color: var(--color-text-secondary);
+                  background-color: var(--color-background-primary);
+                  padding: 2px 3px;
+                  position: absolute;
+                  border-radius: 5px;
+                  border: 1px solid var(--color-text-primary);
+                  box-shadow: 0 4px 20px -2px rgba(var(--color-box-shadow), 0.5);
+
+                  @include media-mobile {
+                     & {
+                        bottom: 50px;
+                        left: -55px;
+                     }
+                  }
+               }
+            }
+
+            .git-logo {
+               width: 45px;
+               height: 45px;
+            }
+         }
+      }
+   }
+
+   .project-image {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 70vh;
+      transition: all 0.5s;
+      @include media-tablet {
+         bottom: 0;
+         height: 68vh;
+         width: 64%;
+      }
+      @include media-mobile {
+         transition: all 0.5s;
+         width: 90%;
+      }
+   }
+
+   &:hover {
+      .project-image {
+         height: 73vh;
+         left: 79%;
+
+         @include media-tablet {
+            height: 70vh;
+            left: 77%;
+         }
+         @include media-mobile {
+            height: 68vh;
+            left: 50%;
+            opacity: 0;
+         }
+      }
+
+      .project-content {
+         right: 26%;
+         opacity: 1;
+
+         @include media-mobile {
+            right: 0;
+         }
+      }
+   }
+}
+
+@keyframes shake {
+   10%,
+   90% {
+      transform: translate3d(-1px, 0, 0);
+   }
+
+   20%,
+   80% {
+      transform: translate3d(2px, 0, 0);
+   }
+
+   30%,
+   50%,
+   70% {
+      transform: translate3d(-4px, 0, 0);
+   }
+
+   40%,
+   60% {
+      transform: translate3d(4px, 0, 0);
+   }
+}

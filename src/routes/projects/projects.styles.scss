@@ -8,35 +8,38 @@
    align-items: center;
    letter-spacing: 0.5px;
    flex-direction: column;
-   max-height: max-content;
-   position: relative;
 
-   .scroll-button {
-      background-color: transparent;
-      border: none;
-      outline: none;
-      position: absolute;
-      top: 85vh;
-      cursor: pointer;
-      z-index: 2;
-      @include media-tablet {
-         & {
-            visibility: hidden;
+   .first-project {
+      position: relative;
+
+      .scroll-button {
+         background-color: transparent;
+         border: none;
+         outline: none;
+         position: absolute;
+         left: 50%;
+         bottom: 10px;
+         cursor: pointer;
+         z-index: 2;
+         @include media-tablet {
+            & {
+               visibility: hidden;
+            }
          }
-      }
 
-      .mouse {
-         max-width: 36px;
-         width: 100%;
-         height: auto;
-         .scroll {
-            pointer-events: none;
-            animation-name: scroll;
-            animation-duration: 1.5s;
-            animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
-            animation-iteration-count: infinite;
-            transform-origin: 50% 20.5px;
-            will-change: transform;
+         .mouse {
+            max-width: 36px;
+            width: 100%;
+            height: auto;
+            .scroll {
+               pointer-events: none;
+               animation-name: scroll;
+               animation-duration: 1.5s;
+               animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+               animation-iteration-count: infinite;
+               transform-origin: 50% 20.5px;
+               will-change: transform;
+            }
          }
       }
    }

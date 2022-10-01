@@ -1,29 +1,30 @@
 @import "../../scss/index.scss";
 .footer-container {
-    @include responsiveText;
-    grid-column: container-start / container-end;
-    background-color: var(--color-text-primary-m);
-    width: 100%;
-    height: 30px;
-    box-shadow: 0 -4px 20px -2px rgba(var(--color-box-shadow), .4);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    span {
-        display: block;
-        width: 100%;
-        font-size: 0.6em;
-    }
-    svg {
-        margin-top: 5px;
-        margin-right: 50px;
-        transition: transform 0.4s ease-in-out;
-        cursor: pointer;
-        &:hover,
-        &:active {
-            transform: scale(1.1);
-        }
-    }
+   @include responsiveText;
+   grid-column: container-start / container-end;
+   background-color: var(--color-text-primary-m);
+   width: 100%;
+   height: 30px;
+   box-shadow: 0 -4px 20px -2px rgba(var(--color-box-shadow), 0.4);
+   display: flex;
+   justify-content: flex-start;
+   line-height: 30px;
+   text-align: center;
+   position: relative;
+   bottom: 0;
+   span {
+      display: block;
+      width: 100%;
+      font-size: 0.6em;
+   }
+   svg {
+      margin-top: 5px;
+      margin-right: 50px;
+      transition: transform 0.4s ease-in-out;
+      cursor: pointer;
+      &:hover,
+      &:active {
+         transform: scale(1.1);
+      }
+   }
 }

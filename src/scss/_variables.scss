@@ -1,71 +1,75 @@
-html{
-    --color-background-primary: #011627;
-    --color-background-secondary: #0B294A;
-    --color-background-secondary-m: #000F1B;
-    --color-background-side-nav: #011627;
-    --color-text-primary: #00BFF9;
-    --color-text-primary-m: #219FD5; // text && footer
-    --color-text-secondary: #D6DEEB;
-    --color-text-tertiary: #87AFF4;
-    --color-text-quaternary: #D3EED6;
-    --color-text-quinary: #5ABEB0;
-    --color-bracket-primary: #FFD700;
-    --color-bracket-secondary: #DA70D6;
-    --color-quotation-marks: #6BFF81;
-    --color-line: #219fd545;
-    --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg) brightness(87%) contrast(91%);
-    --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg) brightness(102%) contrast(95%);
-    --color-switch-button: rgb(243, 243, 243);
-    --color-box-shadow: 39, 94, 254; // dark blue
-
-};
+html {
+   --color-background-primary: #011627;
+   --color-background-secondary: #0b294a;
+   --color-background-secondary-m: #000f1b;
+   --color-background-side-nav: #011627;
+   --color-text-primary: #00bff9;
+   --color-text-primary-m: #219fd5; // text && footer
+   --color-text-secondary: #d6deeb;
+   --color-text-tertiary: #87aff4;
+   --color-text-quaternary: #d3eed6;
+   --color-text-quinary: #5abeb0;
+   --color-bracket-primary: #ffd700;
+   --color-bracket-secondary: #da70d6;
+   --color-quotation-marks: #6bff81;
+   --color-line: #219fd545;
+   --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg)
+      brightness(87%) contrast(91%);
+   --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg)
+      brightness(102%) contrast(95%);
+   --color-switch-button: rgb(243, 243, 243);
+   --color-box-shadow: 39, 94, 254; // dark blue
+   --card-gradient: linear-gradient(45deg, #0b294a 0.01%, #00bff9 100.01%);
+}
 
 html[data-theme="light"] {
-  --color-background-primary: #FFFFFF;
-  --color-background-secondary: #FFFFFF;
-  --color-background-secondary-m: rgb(243, 243, 243);  
-  --color-background-side-nav: #2c2c2c;  
-  --color-text-primary: #2f86d2; 
-  --color-text-primary-m: #1857a4; 
-  --color-text-new-file: #189b2c; 
-  // --color-text-secondary: #828282;
-  --color-text-secondary: #012339;
-  --color-text-tertiary: #B1108E;
-  --color-text-quaternary: #A44185;
-  --color-text-quinary: #034c7c; // readme ##
-  --color-bracket-primary: #0431fa;
-  --color-bracket-secondary: #319331;
-  --color-quotation-marks: #d86db6;;
-  --color-line: #219fd545;
-  --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg) brightness(87%) contrast(91%);
-  --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg) brightness(102%) contrast(95%);
-  --color-switch-button: #011627;
-  --color-box-shadow: 21, 25, 36; // black
-};
+   --color-background-primary: #ffffff;
+   --color-background-secondary: #ffffff;
+   --color-background-secondary-m: rgb(243, 243, 243);
+   --color-background-side-nav: #2c2c2c;
+   --color-text-primary: #2f86d2;
+   --color-text-primary-m: #1857a4;
+   --color-text-new-file: #189b2c;
+   // --color-text-secondary: #828282;
+   --color-text-secondary: #012339;
+   --color-text-tertiary: #b1108e;
+   --color-text-quaternary: #a44185;
+   --color-text-quinary: #034c7c; // readme ##
+   --color-bracket-primary: #0431fa;
+   --color-bracket-secondary: #319331;
+   --color-quotation-marks: #d86db6;
+   --color-line: #219fd545;
+   --color-folder-default: invert(37%) sepia(19%) saturate(1101%) hue-rotate(159deg)
+      brightness(87%) contrast(91%);
+   --color-folder-clicked: invert(76%) sepia(13%) saturate(1365%) hue-rotate(172deg)
+      brightness(102%) contrast(95%);
+   --color-switch-button: #011627;
+   --color-box-shadow: 21, 25, 36; // black
+   --card-gradient: linear-gradient(45deg, #acb6e5 0.01%, #86fde8 100.01%);
+}
 
 $font-sizes: (
-  "font-size-mobileS": 20px,
-  "font-size-mobile": 26px,
-  "font-size-tablet": 32px,
-  "font-size-laptop": 36px,
-  "font-size-desktop": 40px,
-  "font-size-desktopL": 44px
+   "font-size-mobileS": 20px,
+   "font-size-mobile": 26px,
+   "font-size-tablet": 32px,
+   "font-size-laptop": 36px,
+   "font-size-desktop": 40px,
+   "font-size-desktopL": 44px,
 );
 
 @function font-size($font-size-style) {
-  @return map-get($font-sizes, $font-size-style);
-};
-
+   @return map-get($font-sizes, $font-size-style);
+}
 
 $font-sizes-projects: (
-  "font-size-mobileS": 16px,
-  "font-size-mobile": 18px,
-  "font-size-tablet": 20px,
-  "font-size-laptop": 24px,
-  "font-size-desktop": 28px,
-  "font-size-desktopL": 36px
+   "font-size-mobileS": 16px,
+   "font-size-mobile": 18px,
+   "font-size-tablet": 20px,
+   "font-size-laptop": 24px,
+   "font-size-desktop": 28px,
+   "font-size-desktopL": 36px,
 );
 
 @function font-size2($font-size-style) {
-  @return map-get($font-sizes-projects, $font-size-style);
-};
+   @return map-get($font-sizes-projects, $font-size-style);
+} ;

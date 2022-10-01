@@ -1,7 +1,8 @@
 import { ReactComponent as ScrollMouse } from "../../assets/mouse.svg";
 import { ReactComponent as ScrollMouseLight } from "../../assets/mouse-light.svg";
+import { Fragment } from "react";
 
-import ProjectFrame from "../../components/project-frame/project-frame.component";
+import ProjectCard from "../../components/project-card/project-card.component";
 import PROJECTS_DATA from "./projects_data";
 import { useThemeContext } from "../../context/theme/theme.context";
 
@@ -13,13 +14,26 @@ const Projects = () => {
 
    return (
       <section className="projects-container">
-         <button className="scroll-button" onClick={executeScroll}>
-            {currentTheme ? <ScrollMouseLight /> : <ScrollMouse />}
-         </button>
          {PROJECTS_DATA.map((project, index) => {
-            if (index === 1) return <ProjectFrame key={index} data={project} />;
+            if (index === 0)
+               return (
+                  <div className="first-project">
+                     <div style={{ marginTop: "10vh" }} />
+                     <ProjectCard shakeAnimation={true} key={index} data={project} />
+                     <button className="scroll-button" onClick={executeScroll}>
+                        {currentTheme ? <ScrollMouseLight /> : <ScrollMouse />}
+                     </button>
+                     <div style={{ marginBottom: "15vh" }} />
+                  </div>
+               );
 
-            return <ProjectFrame key={index} data={project}></ProjectFrame>;
+            return (
+               <Fragment>
+                  <div style={{ marginTop: "12vh" }} />
+                  <ProjectCard key={index} data={project}></ProjectCard>
+                  <div style={{ marginBottom: "15vh" }} />
+               </Fragment>
+            );
          })}
       </section>
    );
